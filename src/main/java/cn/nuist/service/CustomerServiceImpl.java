@@ -18,12 +18,22 @@ import cn.nuist.pojo.ExcelBean;
 import cn.nuist.pojo.QueryVo;
 import cn.nuist.pojo.Temperature;
 import cn.nuist.utils.ExcelUtil;
+import cn.nuist.dao.DictMapper;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 	
 	@Autowired
 	private TemperatureMapper temperatureMapper;
+
+	@Autowired
+	private DictMapper dictMapper;
+	
+	@Override
+	public List<BaseDict> findDictByCode(String code) {
+		List<BaseDict> list = dictMapper.findDictByCode(code);
+		return list;
+	}
 
 
 	@Override
@@ -142,13 +152,6 @@ public class CustomerServiceImpl implements CustomerService {
 	    System.out.println(Temlist); 
 	    return xssfWorkbook;
 	}
-
-	@Override
-	public List<BaseDict> findDictByCode(String code) {
-		
-		return null;
-	} 
-
 
 
 }
