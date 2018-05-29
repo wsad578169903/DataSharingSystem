@@ -19,21 +19,12 @@ import cn.nuist.pojo.QueryVo;
 import cn.nuist.pojo.Temperature;
 import cn.nuist.utils.ExcelUtil;
 
-import cn.nuist.dao.DictMapper;
-
 @Service
 public class CustomerServiceImpl implements CustomerService {
 	
 	@Autowired
-	private DictMapper dictMapper;
-	@Autowired
 	private TemperatureMapper temperatureMapper;
 
-	@Override
-	public List<BaseDict> findDictByCode(String code) {
-		List<BaseDict> list = dictMapper.findDictByCode(code);
-		return list;
-	}
 
 	@Override
 	public List<Temperature> findTemperatureByVo(QueryVo vo) {
@@ -152,8 +143,12 @@ public class CustomerServiceImpl implements CustomerService {
 	    return xssfWorkbook;
 	}
 
-	
+	@Override
+	public List<BaseDict> findDictByCode(String code) {
+		
+		return null;
+	} 
+
+
 
 }
-
-

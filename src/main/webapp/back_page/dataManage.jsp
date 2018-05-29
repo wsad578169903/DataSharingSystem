@@ -506,7 +506,7 @@
 					window.location.reload();
 				});
 			}
-
+		}
 		
 	
 		
