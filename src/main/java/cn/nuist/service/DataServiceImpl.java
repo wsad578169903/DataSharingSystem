@@ -21,7 +21,7 @@ import cn.nuist.utils.ExcelUtil;
 import cn.nuist.dao.DictMapper;
 
 @Service
-public class CustomerServiceImpl implements CustomerService {
+public class DataServiceImpl implements DataService {
 	
 	@Autowired
 	private TemperatureMapper temperatureMapper;

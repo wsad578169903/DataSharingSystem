@@ -12,7 +12,7 @@ import cn.nuist.pojo.QueryVo;
 import cn.nuist.pojo.Temperature;
 
 
-public interface CustomerService {
+public interface DataService {
 
 	//下拉列表
 	public List<BaseDict> findDictByCode(String code);
