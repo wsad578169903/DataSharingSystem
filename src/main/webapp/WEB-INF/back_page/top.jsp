@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>BABASPORT Administrator's Control Panel - powered by babasport</title>
+<title>datashare Administrator's Control Panel - powered by datashare</title>
 <link href="/res/itcast/css/admin.css" rel="stylesheet" type="text/css"/>
 <link href="/res/common/css/theme.css" rel="stylesheet" type="text/css"/>
 <link href="/res/common/css/jquery.validate.css" rel="stylesheet" type="text/css"/>
@@ -82,7 +82,7 @@ function HoverLi(id){
                                 <td>
                                 	<ul class="nav-menu">
                                     	<li class="current" id="tb_11" onclick="HoverLi(11);"><a href="main.do" target="mainFrame">首页</a></li>
-										<li class="sep"></li><li class="normal" id="tb_12" onclick="HoverLi(12);"><a href="frame/product_main.do" target="mainFrame">商品</a></li>
+										<li class="sep"></li><li class="normal" id="tb_12" onclick="HoverLi(12);"><a href="frame/product_main.do" target="mainFrame">数据</a></li>
 										<li class="sep"></li><li class="normal" id="tb_13" onclick="HoverLi(13);"><a href="frame/order_main.do" target="mainFrame">订单</a></li>
 										<li class="sep"></li><li class="normal" id="tb_14" onclick="HoverLi(14);"><a href="frame/product_main.jsp" target="mainFrame">支付</a></li>
 										<li class="sep"></li><li class="normal" id="tb_15" onclick="HoverLi(15);"><a href="frame/product_main.jsp" target="mainFrame">资源</a></li>

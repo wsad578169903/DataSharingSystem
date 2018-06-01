@@ -27,7 +27,7 @@
 	<thead class="pn-lthead">
 		<tr>
 			<th width="20"><input type="checkbox" onclick="checkBox('ids',this.checked)"/></th>
-			<th>品牌ID</th>
+			<th>ID</th>
 			<th>品牌名称</th>
 			<th>品牌图片</th>
 			<th>品牌描述</th>

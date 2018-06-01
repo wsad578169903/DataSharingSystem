@@ -23,9 +23,9 @@
 <div class="left">
 <%@ include file="/WEB-INF/back_page/date.jsp" %>
      <ul class="w-lful">
-		<li><a href="../product/list.jsp" target="rightFrame">商品管理</a></li>
-		<li><a href="/brand/list.do" target="rightFrame">品牌管理</a></li>
-		<li><a href="../type/list.jsp" target="rightFrame">类型管理</a></li>
+		<li><a href="/dataQuery/list.do" target="rightFrame">数据查询</a></li>
+		<li><a href="/data/dataUpload.do" target="rightFrame">数据上传</a></li>
+		<li><a href="/data/dataDownload.do" target="rightFrame">数据下载</a></li>
      </ul>
 </div>
 </body>

@@ -12,7 +12,7 @@
      <ul class="w-lful">
      	<li><a href="right.jsp" target="rightFrame">个人资料</a></li>
       	<li><a href="right.jsp" target="rightFrame">会员注册统计</a></li>
-     	<li><a href="right.jsp" target="rightFrame">商品统计</a></li>
+     	<li><a href="frame/product_main.do" target="mainFrame">数据管理</a></li>
      	<li><a href="right.jsp" target="rightFrame">订单统计</a></li>
      	<li><a href="right.jsp" target="rightFrame">留言统计</a></li>
      	<li><a href="right.jsp" target="rightFrame">PV统计</a></li>
