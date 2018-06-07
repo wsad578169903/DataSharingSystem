@@ -153,5 +153,25 @@ public class DataServiceImpl implements DataService {
 	    return xssfWorkbook;
 	}
 
+	//修改保存
+	@Override
+	public void updateTemperatureById(Temperature t) {
+		temperatureMapper.updateTemperatureById(t);
+		
+	}
+
+	//根据ID删除
+	@Override
+	public void deleteTemperatureById(BigInteger id) {
+		temperatureMapper.deleteTemperatureById(id);
+		
+	}
+
+	//根据ID批量删除
+	@Override
+	public void deleteTemperatureByIds(BigInteger[] ids) {
+		temperatureMapper.deleteTemperatureByIds(ids);
+	}
+
 
 }

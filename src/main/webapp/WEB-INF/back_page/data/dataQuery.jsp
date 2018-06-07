@@ -20,21 +20,23 @@
 <title>数据查询</title>
 
 <!-- Bootstrap Core CSS -->
-<link href="/res/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=basePath%>res/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- MetisMenu CSS -->
-<link href="/res/css/metisMenu.min.css" rel="stylesheet">
+<link href="<%=basePath%>res/css/metisMenu.min.css" rel="stylesheet">
 
 <!-- DataTables CSS -->
-<link href="/res/css/dataTables.bootstrap.css" rel="stylesheet">
+<link href="<%=basePath%>res/css/dataTables.bootstrap.css"
+	rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="/res/css/sb-admin-2.css" rel="stylesheet">
+<link href="<%=basePath%>res/css/sb-admin-2.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="/res/css/font-awesome.min.css" rel="stylesheet"
+<link href="<%=basePath%>res/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">
-<link href="/res/css/boot-crm.css" rel="stylesheet" type="text/css">
+<link href="<%=basePath%>res/css/boot-crm.css" rel="stylesheet"
+	type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,10 +55,20 @@
 				action="${pageContext.request.contextPath }/dataQuery/list.do"
 				method="get">
 				<div class="form-group">
-					<label for="dataStation">数据站点</label> <input type="text"
+					<label for="dataStation">数据站点搜索</label> <input type="text"
 						class="form-control" id="dataStation" value="${dataStation}"
 						name="dataStation">
 				</div>
+				<%-- <div class="form-group">
+					<label for="dataStation">数据站点</label> <select class="form-control"
+						id="dataStation" name="dataStation">
+						<option value="">--请选择--</option>
+						<c:forEach items="${stationType}" var="item">
+							<option value="${item.dict_id}"
+								<c:if test="${item.dict_id == dataStation}"> selected</c:if>>${item.dict_item_name }</option>
+						</c:forEach>
+					</select>
+				</div> --%>
 				<div class="form-group">
 					<label for="dataCity">数据城市</label> <select class="form-control"
 						id="dataCity" name="dataCity">
@@ -109,45 +121,58 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">数据信息列表</div>
 				<!-- /.panel-heading -->
-				<table class="table table-bordered table-striped">
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>数据站点</th>
-							<th>数据城市</th>
-							<th>数据年份</th>
-							<th>数据月份</th>
-							<th>数据日期</th>
-							<th>数据要素类型</th>
-							<th>数据来源</th>
-							<th>数据操作</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${page.rows}" var="row">
+				<form id="deleteAll">
+					<table class="table table-bordered table-striped">
+						<thead>
 							<tr>
-								<td>${row.t_id}</td>
-								<td>${row.station_id}</td>
-								<td>${row.data_city}</td>
-								<td>${row.year_data}</td>
-								<td>${row.mon_data}</td>
-								<td>${row.day_data}</td>
-								<td>${row.data_element}</td>
-								<td>${row.data_source}</td>
-								<td><a href="#" class="btn btn-primary btn-xs"
-									data-toggle="modal" data-target="#dataEditDialog"
-									onclick="editData(${row.t_id})">修改</a> <a href="#"
-									class="btn btn-danger btn-xs" onclick="deleteData(${row.t_id})">删除</a>
-
-								</td>
+								<th width="20"><input type="checkbox"
+									onclick="checkBox('ids',this.checked)" /></th>
+								<th>ID</th>
+								<th>数据站点</th>
+								<th>数据城市</th>
+								<th>数据年份</th>
+								<th>数据月份</th>
+								<th>数据日期</th>
+								<th>数据要素类型</th>
+								<th>数据来源</th>
+								<th>数据操作</th>
 							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-				<div class="col-md-12 text-right">
-					<itcast:page
-						url="${pageContext.request.contextPath }/dataQuery/list.do" />
+						</thead>
+						<tbody>
+							<c:forEach items="${page.rows}" var="row">
+								<tr>
+									<td><input type="checkbox" value="${row.t_id}" name="ids" /></td>
+									<td>${row.t_id}</td>
+									<td>${row.station_id}</td>
+									<td>${row.data_city}</td>
+									<td>${row.year_data}</td>
+									<td>${row.mon_data}</td>
+									<td>${row.day_data}</td>
+									<td>${row.data_element}</td>
+									<td>${row.data_source}</td>
+									<td><a href="#" class="btn btn-primary btn-xs"
+										data-toggle="modal" data-target="#dataEditDialog"
+										onclick="editData(${row.t_id})">修改</a> <a href="#"
+										class="btn btn-danger btn-xs"
+										onclick="deleteData(${row.t_id})">删除</a></td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</form>
+
+				<div style="margin-top: 15px;">
+					<input class="btn btn-danger btn-xs " type="button" value="批量删除"
+						onclick="optDelete();" />
 				</div>
+
+				<div class="col-md-12 text-right">
+					<div>
+						<itcast:page
+							url="${pageContext.request.contextPath }/dataQuery/list.do" />
+					</div>
+				</div>
+
 				<!-- /.panel-body -->
 			</div>
 			<!-- /.panel -->
@@ -171,12 +196,12 @@
 				</div>
 				<div class="modal-body">
 					<form class="form-horizontal" id="edit_data_form">
-						<input type="hidden" id="edit_t_id" name="cust_id" />
+						<input type="hidden" id="edit_t_id" name="t_id" />
 						<div class="form-group">
-							<label for="edit_stationId" class="col-sm-2 control-label">数据站点</label>
+							<label for="edit_dataStation" class="col-sm-2 control-label">数据站点</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="edit_stationId"
-									placeholder="数据站点" name=" t_id ">
+								<input type="text" class="form-control" id="edit_dataStation"
+									placeholder="数据站点" name="station_id">
 							</div>
 						</div>
 						<div class="form-group">
@@ -233,20 +258,20 @@
 								</select>
 							</div>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="edit_dataElement" class="col-sm-2 control-label">数据要素</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="edit_dataElement"
 									placeholder="数据要素类型" name="data_element">
 							</div>
-						</div>
-						<div class="form-group">
+						</div> -->
+						<!-- <div class="form-group">
 							<label for="edit_dataSource" class="col-sm-2 control-label">数据来源</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="edit_dataSource"
 									placeholder="数据来源" name="data_source">
 							</div>
-						</div>
+						</div> -->
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -261,56 +286,77 @@
 	<!-- /#wrapper -->
 
 	<!-- jQuery -->
-	<script src="/res/js/jquery.min.js"></script>
+	<script src="<%=basePath%>res/js/jquery.min.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="/res/js/bootstrap.min.js"></script>
+	<script src="<%=basePath%>res/js/bootstrap.min.js"></script>
 
 	<!-- Metis Menu Plugin JavaScript -->
-	<script src="/res/js/metisMenu.min.js"></script>
+	<script src="<%=basePath%>res/js/metisMenu.min.js"></script>
 
 	<!-- DataTables JavaScript -->
-	<script src="/res/js/jquery.dataTables.min.js"></script>
-	<script src="/res/js/dataTables.bootstrap.min.js"></script>
+	<script src="<%=basePath%>res/js/jquery.dataTables.min.js"></script>
+	<script src="<%=basePath%>res/js/dataTables.bootstrap.min.js"></script>
 
 	<!-- Custom Theme JavaScript -->
-	<script src="/res/js/sb-admin-2.js"></script>
+	<script src="<%=basePath%>res/js/sb-admin-2.js"></script>
 
 	<script type="text/javascript">
 		function editData(id) {
 			$.ajax({
 				type:"get",
-				url:"<%=basePath%>customer/detail.do",
+				url:"<%=basePath%>dataQuery/detail.do",
 				data:{"id":id},
 				success:function(data) {
 					$("#edit_t_id").val(data.t_id);
-					$("#edit_stationId").val(data.station_id);
+					$("#edit_dataStation").val(data.station_id);
 					$("#edit_dataCity").val(data.data_city);
 					$("#edit_dataElement").val(data.data_element);
 					$("#edit_dataYear").val(data.data_year);
 					$("#edit_dataMon").val(data.data_mon);
-					$("#edit_dataElement").val(data.data_element);
-					$("#edit_dataSource").val(data.data_source);
 				}
 			});
 		}
+		
 		function updateData(){
-			$.post("<%=basePath%>customer/update.do",$("#edit_data_form").serialize(),function(data){
+			/*  alert($("#edit_data_form").serialize())  */
+			$.post("<%=basePath%>dataQuery/update.do",$("#edit_data_form").serialize(),function(data){
 				alert("数据信息更新成功！");
 				window.location.reload();
 			});
 		}
 		
-		function deleteData(id) {
+		function deleteData(id){
 			if(confirm('确实要删除该客户吗?')) {
-				$.get("<%=basePath%>customer/delete.do",{"id":id},function(data){
+				$.get("<%=basePath%>dataQuery/delete.do",{"id":id},function(data){
 					alert("客户删除更新成功！");
 					window.location.reload();
 				});
 			}
 		}
 		
-	
+		//全选
+		function checkBox(name,checked){
+			$("input[name='"+name+"']").prop("checked",checked);
+		}
+		
+		//批量删除
+		
+		function optDelete(){
+			//请至少选择一个
+			var s=$("input[name='ids']:checked").size();
+			if (s<=0) {
+				alert("请至少选择一个！");
+				return;
+			} 
+			if(!confirm("你确定删除吗？")){
+				return;
+			}
+			$.post("<%=basePath%>dataQuery/deletes.do",$("#deleteAll").serialize(),function(data){
+				alert("数据删除成功！");
+				window.location.reload();
+			});
+		}
 		
 	</script>
 

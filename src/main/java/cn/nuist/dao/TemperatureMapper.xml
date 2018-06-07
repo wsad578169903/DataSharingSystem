@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.nuist.dao.TemperatureMapper">
-	
+
 	<!-- 抽取where条件 -->
 	<sql id="temperature_where">
-		<where> 
+		<where>
 			<if test="dataStation !=null and dataStation !='' ">
 				and t.station_id like '%${dataStation}%'
 			</if>
@@ -22,39 +22,86 @@
 			</if>
 		</where>
 	</sql>
-	
+
 	<!-- 分类查询 -->
-	<select id="findTemperatureByVo" parameterType="cn.nuist.pojo.QueryVo" resultType="cn.nuist.pojo.Temperature">
-		SELECT t.t_id,t.station_id ,d.dict_item_name data_city,t.year_data,t.mon_data,t.day_data,b.dict_item_name data_element,c.dict_item_name data_source from t 
+	<select id="findTemperatureByVo" parameterType="cn.nuist.pojo.QueryVo"
+		resultType="cn.nuist.pojo.Temperature">
+		SELECT t.t_id,t.station_id ,d.dict_item_name
+		data_city,t.year_data,t.mon_data,t.day_data,b.dict_item_name
+		data_element,c.dict_item_name data_source from t
 		LEFT JOIN base_dict b ON t.data_element=b.dict_id
-		LEFT JOIN base_dict c ON t.data_source=c.dict_id
+		LEFT JOIN base_dict c ON
+		t.data_source=c.dict_id
 		LEFT JOIN base_dict d ON t.data_city=d.dict_id
 		<include refid="temperature_where"></include>
 		<!-- 从第几条开始到第几条 -->
 		limit #{start},#{size}
 	</select>
-	
+
 	<!-- 分页用 -->
-	<select id="findTemperatureByVoCount" parameterType="cn.nuist.pojo.QueryVo" resultType="int">
-		SELECT count(*) from t 
+	<select id="findTemperatureByVoCount" parameterType="cn.nuist.pojo.QueryVo"
+		resultType="int">
+		SELECT count(*) from t
 		LEFT JOIN base_dict b ON t.data_element=b.dict_id
-		LEFT JOIN base_dict c ON t.data_source=c.dict_id
+		LEFT JOIN base_dict c ON
+		t.data_source=c.dict_id
 		LEFT JOIN base_dict d ON t.data_city=d.dict_id
 		<include refid="temperature_where"></include>
 	</select>
-	
-	<!-- 根据ID修改 -->
-	<select id="findTemperatureById" parameterType="BigInteger" resultType="cn.nuist.pojo.Temperature">
+
+	<!-- 根据ID显示详情页 -->
+	<select id="findTemperatureById" parameterType="BigInteger"
+		resultType="cn.nuist.pojo.Temperature">
 		select * from t where t_id=#{id}
 	</select>
+
+	<!-- 根据ID修改 -->
+
+	<update id="updateTemperatureById" parameterType="cn.nuist.pojo.Temperature">
+		UPDATE t
+		<!-- set标签作用: 第一可以自动添加set关键字, 第二可以去掉最后一个更新的逗号 -->
+		<set>
+			<if test="station_id != null and  station_id != ''">
+				station_id=#{station_id} ,
+			</if>
+
+			<!-- <if test="data_city!= null and data_city != ''"> data_city=#{data_city}, 
+				</if> -->
+
+			<!-- <if test="data_element != null and data_element != ''"> data_element=#{data_element} 
+				, </if> <if test="data_year != null and data_year != ''"> data_year=#{data_year} 
+				, </if> <if test="data_mon != null and data_mon != ''"> data_mon=#{data_mon} 
+				, </if> -->
+		</set>
+		where t_id=#{t_id}
+	</update>
+
+	<!-- 根据ID删除 -->
+	<delete id="deleteTemperatureById" parameterType="BigInteger">
+		delete from t where t_id=#{id}
+	</delete>
 	
+	<!-- 根据ID数据批量删除 -->
+	<delete id="deleteTemperatureByIds" parameterType="BigInteger">
+		delete from t
+		<where>
+			t_id in
+			<foreach collection="array" item="id" open="(" close=")"  separator=",">
+					#{id}
+			</foreach>
+		</where>
+	</delete>
+
+
+
 	<!-- 根据站点名称下载 -->
-	<select id="downloadTemperatureBydataStation" parameterType="String" resultType="cn.nuist.pojo.Temperature">
+	<select id="downloadTemperatureBydataStation" parameterType="String"
+		resultType="cn.nuist.pojo.Temperature">
 		select * from t where station_id=#{dataStation}
 	</select>
-	
+
 	<!-- 根据所有选择的条件下载 -->
-		
-	
+
+
 
 </mapper>
