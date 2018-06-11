@@ -1,4 +1,4 @@
-package cn.nuist.utils;
+package cn.nuist.common.utils;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
