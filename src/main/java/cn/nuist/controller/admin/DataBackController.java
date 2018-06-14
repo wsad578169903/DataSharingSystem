@@ -2,11 +2,11 @@ package cn.nuist.controller.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 /**
-* @author libo
-* @version 创建时间：2018年5月30日 下午9:13:51
-* 类说明:后台主界面加载
-*/
+ * @author libo
+ * @version 创建时间：2018年5月30日 下午9:13:51 类说明:后台主界面加载
+ */
 @Controller
 
 /* 跳转入口页面 */
@@ -40,4 +40,29 @@ public class DataBackController {
 		return "right";
 	}
 
+	/* 跳转注册页面 */
+	@RequestMapping(value = "/register.do")
+	public String register() {
+		return "register";
+	}
+
+
+
+	/* 跳转数据下载页面 */
+	@RequestMapping(value = "/data/dataDownload.do")
+	public String dataDownload() {
+		return "data/dataDownload";
+	}
+
+	/* 跳转数据查询页面 */
+	@RequestMapping(value = "/data/dataQuery.do")
+	public String dataQuery() {
+		return "data/dataQuery";
+	}
+	/* 测试页面跳转到login页面 */
+	@RequestMapping(value = "/test.do")
+	public String test() {
+		return "login";
+	}
+	
 }

@@ -1,4 +1,4 @@
-package cn.nuist.common.web.session;
+package cn.nuist.common.session;
 
 import java.io.Serializable;
 

@@ -23,11 +23,6 @@ import cn.nuist.service.DataService;
 
 @Controller
 public class DataQueryController {
-	// 数据查询
-	@RequestMapping(value = "/data/dataQuery.do")
-	public String dataManage() {
-		return "data/dataQuery";
-	}
 
 	@Autowired
 	private DataService dataService;

@@ -17,7 +17,7 @@ import cn.nuist.pojo.BaseDict;
 import cn.nuist.pojo.ExcelBean;
 import cn.nuist.pojo.QueryVo;
 import cn.nuist.pojo.Temperature;
-import cn.nuist.utils.ExcelUtil;
+import cn.nuist.common.utils.ExcelUtil;
 import cn.nuist.dao.DictMapper;
 
 @Service

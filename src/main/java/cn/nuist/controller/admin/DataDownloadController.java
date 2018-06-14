@@ -25,11 +25,6 @@ import cn.nuist.service.DataService;
 
 @Controller
 public class DataDownloadController {
-	//数据下载
-	@RequestMapping(value ="/data/dataDownload.do")
-	public String dataDownload() {
-		return "data/dataDownload";
-	}
 	
 	@Autowired
 	private DataService dataService;

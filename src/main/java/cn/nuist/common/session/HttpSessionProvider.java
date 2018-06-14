@@ -1,4 +1,4 @@
-package cn.nuist.common.web.session;
+package cn.nuist.common.session;
 
 import java.io.Serializable;
 
@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 * @version 创建时间：2018年6月7日 下午11:19:47
 * 类说明
 */
+
 public class HttpSessionProvider implements SessionProvider{
 
 	@Override
@@ -45,5 +46,7 @@ public class HttpSessionProvider implements SessionProvider{
 		
 		return request.getSession().getId();
 	}
+	
+	
 
 }

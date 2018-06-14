@@ -69,6 +69,18 @@
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>captcha</servlet-name>
+		<servlet-class>cn.nuist.common.captcha.JcaptchaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>captcha</servlet-name>
+		<url-pattern>/captcha.svl</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
 	<!--过滤器元素将一个名字与一个实现javax.servlet.Filter接口的类相关联-->
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>

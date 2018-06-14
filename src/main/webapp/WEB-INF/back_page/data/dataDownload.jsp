@@ -49,7 +49,7 @@
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<form class="form-inline"
-				action="${pageContext.request.contextPath }/dataManager/download.do"
+				action="${pageContext.request.contextPath }/download.do"
 				method="get">
 				<div class="form-group">
 					<label for="dataStation">数据站点</label> <input type="text"

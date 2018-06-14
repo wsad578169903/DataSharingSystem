@@ -7,24 +7,24 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>datashare Maven Webapp</name>
 	<!-- 集中定义依赖版本号 -->
-	
+
 	<repositories>
-    <repository>
-        <id>alimaven</id>
-        <name>aliyun maven</name>
-        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-    </repository>
-    <repository>
-        <id>jcenter</id>
-        <name>jcenter Repository</name>
-        <url>http://jcenter.bintray.com/</url>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </repository>
-</repositories>
-	
-	
+		<repository>
+			<id>alimaven</id>
+			<name>aliyun maven</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>jcenter</id>
+			<name>jcenter Repository</name>
+			<url>http://jcenter.bintray.com/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+
 	<properties>
 		<junit.version>3.8.1</junit.version>
 		<spring.version>4.2.4.RELEASE</spring.version>
@@ -223,12 +223,12 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
 			<version>${dubbo.version}</version>
-			<exclusions>  
-            <exclusion>  
-                <artifactId>spring</artifactId>  
-                <groupId>org.springframework</groupId>  
-                </exclusion>  
-            </exclusions>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
@@ -282,6 +282,31 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>4.2.5.RELEASE</version>
+		</dependency>
+		<!--jcaptcha -->
+		<dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>jcaptcha</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<!--JSTL导入-->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<!-- json转换 ,springmvc 返回json格式必须加入 -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.11</version>
 		</dependency>
 	</dependencies>
 	<build>

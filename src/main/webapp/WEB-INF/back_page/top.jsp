@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -68,8 +69,8 @@ function HoverLi(id){
                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                   <tr>
                                     <td width="420" height="38">
-                                    <img src="/res/itcast/img/admin/welconlogin-icon.png"/><span id="welcome">您好:admin!</span>
-                                    <img src="/res/itcast/img/admin/loginout-icon.png"/><a href="logout.do?returnUrl=index.do" target="_top" id="logout" onclick="return confirm('您确定退出吗?');">退出</a> 
+                                    <img src="/res/itcast/img/admin/welconlogin-icon.png"/><span id="welcome">您好:&nbsp ${sessionScope.admin.xm}&nbsp!</span>
+                                    <img src="/res/itcast/img/admin/loginout-icon.png"/><a href="outLogin.do" target="_top" id="logout" onclick="return confirm('您确定退出吗?');">退出</a> 
                                     <img src="/res/itcast/img/admin/message-unread.png"/>&nbsp;<a href="message/v_list.do" target="rightFrame">你有<span id="countDiv">0</span>条信息未读</a>
                                     </td>
                                   </tr>
