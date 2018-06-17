@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 import com.octo.captcha.service.image.ImageCaptchaService;
 
@@ -60,7 +61,7 @@ public class AdminLoginController {
 						if (null != a && a.getPwd().equals(admin.getPwd())) {
 							//将用户信息放入session中
 							model.addAttribute("admin", a);
-							sessionProvider.setAttribute(request, Constants.BUYER_SESSION, a);
+							sessionProvider.setAttribute(request, Constants.ADMIN_SESSION, a);
 							return "index";
 						} else {
 							model.addAttribute("error", "用户名或密码输入错误，请重新输入");
@@ -83,9 +84,15 @@ public class AdminLoginController {
 
 	// 注销方法
 	@RequestMapping(value = "outLogin.do")
-	public String outLogin(HttpSession session) {
+	public String outLogin(HttpSession session,SessionStatus sessionStatus) {
 		// 通过session.invalidate()方法来注销当前的session
+		session.removeAttribute("admin");
 		session.invalidate();
+		sessionStatus.setComplete();
+		/*HttpSession session = request.getSession(false);
+		if(session !=null){
+			session.invalidate();
+		}*/
 		return "login";
 	}
 

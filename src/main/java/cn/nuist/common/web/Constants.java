@@ -15,6 +15,6 @@ public interface Constants {
 	/**
 	 * 用户Session
 	 */
-	public static final String BUYER_SESSION = "buyer_session";
+	public static final String ADMIN_SESSION = "admin_session";
 	
 }

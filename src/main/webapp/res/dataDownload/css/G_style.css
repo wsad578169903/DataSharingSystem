@@ -1,0 +1,195 @@
+
+.g_content {
+    background: url('../images/bg_check1.png') no-repeat;
+    margin-bottom: 0;
+    border: 1px solid #DDD;
+    padding: 40px;
+
+}
+
+.g_content_bg {
+    height: 229px;
+    position: relative;
+    background: url('../images/bg_check2.png') bottom no-repeat;
+}
+
+/***************************************
+**** 面包屑区域
+***************************************/
+
+.crumbs {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #666666;
+
+}
+
+/***************************************
+**** 查询页面标题
+***************************************/
+.check_title {
+    height: 107px;
+    line-height: 107px;
+    font-size: 30px;
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+}
+
+.check_filter_title {
+    border-bottom: 1px solid #dddddd;
+    height: 40px;
+    line-height: 45px;
+    margin-top: 10px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.check_filter_content {
+    height: 80px;
+}
+
+.check_filter_content input[type='text'] {
+    height: 30px;
+    width: 200px;
+}
+
+.check_filter_content span {
+    margin-top: 10px;
+    height: 20px;
+    width: 50px;
+    display: inline-block;
+}
+
+.diban {
+    background: #f9fbfb;
+    margin-top: 12px;
+    border: 1px solid #DDD;
+    padding: 20px;
+    height: auto;
+    cursor: pointer;
+}
+
+.diban > span {
+    height: 28px;
+    width: 77px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.diban .active {
+    height: 28px;
+    width: 55px;
+    line-height: 28px;
+    border-radius: 5px;
+    background: #1e92e2;
+    text-align: center;
+    color: #FFF;
+
+}
+
+.lgdiban > span {
+    height: 28px;
+    width: 155px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.lgdiban .active {
+    height: 28px;
+    width: 155px;
+    line-height: 28px;
+    border-radius: 5px;
+    background: #1e92e2;
+    text-align: center;
+    color: #FFF;
+    /*margin-right: 12px;*/
+}
+
+.dibanselect {
+    background: #f9fbfb;
+    margin-top: 12px;
+    border: 1px solid #DDD;
+    padding: 20px;
+    height: auto;
+}
+
+.dibanselect span {
+    margin-top: 10px;
+    height: 20px;
+    width: 160px;
+    display: inline-block;
+
+}
+
+.dibanselect span label {
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+
+.dibanselect1 span {
+    margin-top: 10px;
+    height: 20px;
+    width: 200px;
+    display: inline-block;
+
+}
+
+.dibanselect1 span label {
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+
+/*检索按钮*/
+.btn_jiansuo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 119px;
+}
+
+/*调节文字和复选框之间的间距*/
+input[type=checkbox], input[type=radio] {
+    margin: 4px 4px 0 !important;
+    margin-top: 1px \9;
+    line-height: normal;
+    vertical-align: sub !important;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/****************************************************************/
+/*关于我们*/
+.article-cont {
+    width: 1036px;
+    margin: 0 auto;
+    position: relative;
+    background: url('../images/about_bg.png') no-repeat;
+    height: 1580px;
+}
+
+
+
+.search-center .article {
+    margin: 10px 0px 20px 0px;
+    font-size: 14px;
+}
+
+
+.article-cont p{
+    width: 77%;
+    text-align: justify;
+    margin-left: 120px;
+}
+
+.search-center p span{
+    font-size:16px;
+}

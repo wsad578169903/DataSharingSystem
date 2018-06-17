@@ -1,0 +1,1655 @@
+<!DOCTYPE >
+<html>
+
+	<head>
+		<title>中国气象数据网</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/pager.css" />
+		<link rel="stylesheet" type="text/css" href="css/WdatePicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/welive.css" />
+		<link rel="stylesheet" type="text/css" href="css/style(1).css" />
+		<link rel="stylesheet" href="css/stylechange.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-dialog.css" />
+		<link rel="stylesheet" type="text/css" href="css/jqcloud.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+		<script src="js/jquery.ui.widget.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/welive.js"></script>
+		<script src="js/jqcloud-1.0.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/hm.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/require.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/require-config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/css.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="./中国气象数据网_files/dialog-min.js.下载"></script>-->
+		<script type="text/javascript" src="./中国气象数据网_files/stats" charset="UTF-8"></script>
+		<script src="js/newIndex.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/clickheat.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/weather.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/query.md5.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.ui.widget.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/forecast.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="weatherbg"></div>
+		<div class="head-top">
+			<div class="head-top-cont">
+				<div class="head-top-cont-width">
+					<div class="head-top-cont-widthIc"></div>
+					<a href="http://data.cma.cn/en" target="_blank">English</a>
+					<a href="http://data.cma.cn/article/getLeft/id/251/keyIndex/6.html" target="_blank">联系我们</a>
+					<div class="headerTopRightSpan" id="headMobile">
+						<div class="cel_text">
+							<a class="text12SongH" href="javascript:void(0);">手机端</a>
+						</div>
+						<div class="cel_icon"></div>
+						<div class="mobileBloc" style="cursor: pointer;">
+							<div class="mobileBlocTitle text12SongH">
+								<div class="weiXinBlocTitleBorder">
+									<a href="javascript:void(0);" onclick="window.open(&#39;/site/appdl.html&#39;)"><strong>手机端</strong></a>
+								</div>
+							</div>
+							<div class="mobileLineMark_tongyong"></div>
+							<div class="moblieTop" onclick="window.open(&#39;/site/appdl.html&#39;)">
+								<div style="float: left;">
+									<img class="weiXinImg_tongyong" src="images/app.png">
+								</div>
+							</div>
+							<div class="weiXinImg_right_tongyong" onclick="window.open(&#39;/site/appdl.html&#39;)">
+								<div class="weiXinImg_right_word">
+									中国气象数据网APP
+								</div>
+								<div class="weiXinImg_right_iphone">
+									<img src="images/ty_2.png" style="display:block;">
+								</div>
+								<div style="clear:both;"></div>
+								<div class="weiXinImg_right_iphone" style="margin-left:40px;margin-top: -40px;">
+									<img src="images/ty_1.png" style="margin:0 auto;display:block;">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="headerTopRightSpan" id="weiBo">
+						<div class="wb_text">
+							<a class="text12SongH" href="">微博</a>
+						</div>
+						<div class="wb_icon"></div>
+					</div>
+					<div class="headerTopRightSpan" id="weiXin">
+						<div class="wx_text">
+							<a class="text12SongH" href="">微信</a>
+						</div>
+						<div class="wx_icon"></div>
+						<div class="weiXinBloc">
+							<div class="weiXinBlocTitle text12SongH">
+								<div class="weiXinBlocTitleBorder1"><strong>微信</strong></div>
+							</div>
+							<div class="weiXinLineMark"></div>
+							<img class="weiXinImg" src="images/weixin.jpg">
+							<div class="weiXinText text12SongH">中国气象数据网<br>微信号<br>扫一扫，立刻关注</div>
+						</div>
+					</div>
+					<span><a href="javascript:void(0);" url="/order/carView.html" class="validfeedback feedbacklogin">我的数据筐</a></span>&nbsp;
+					<a href="" target="_blank" id="regLink">注册</a><span id="loginStatus"><a class="loginhead" style="border:0px;"><span>登录</span></a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="head12Ba">
+			<div class="head12">
+				<a href="http://data.cma.cn/" class="head12A"></a>
+			</div>
+		</div>
+		<iframe src="./中国气象数据网_files/saved_resource.html" width="0" height="0" frameborder="no" style="display:none;"></iframe>
+		<div class="nav12 nav2">
+			<div class="navbg12"></div>
+			<div class="navcont12">
+				<div class="ul">
+					<div class="li">
+						<a class="index-nav15" href="http://data.cma.cn/site/index.html"><i class="home"></i>首页</a>
+					</div>
+					<div class="navDi" style="background: rgb(3, 116, 174);"></div>
+					<div class="li sf-menu">
+						<a href="http://data.cma.cn/data/cdcindex.html">数据服务</a>
+						<ul class="sf_sec_ul">
+
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/0b9164954813c573.html" class="erji">共享目录</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/f0fb4b55508804ca.html" class="erji">地面资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/e6ba725cabfddf8b.html" class="erji">高空资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/995b999bbea581d8.html" class="erji">海洋资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/ca168113bf251d6a.html" class="erji">辐射资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/111675654f35e824.html" class="erji">农气资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/98c64da7ee348b37.html" class="erji">数值预报</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/be494db5073e5650.html" class="erji">历史气候代用</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/227aa07a9079550a.html" class="erji">雷达资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/125cb60be7cb5b8d.html" class="erji">卫星资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/ebc438f839c777fd.html" class="erji">服务产品</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/8e65c709b3220e70.html" class="erji">气象灾害</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/180847af781bf886.html" class="erji">科考资料</a>
+							</li>
+							<li>
+								<a href="http://data.cma.cn/data/cdcindex/cid/2137a2b4bc7a75a2.html" class="erji">专题服务</a>
+							</li>
+						</ul>
+					</div>
+					<div class="navDi" style="background: rgb(3, 116, 174);"></div>
+					<div class="li">
+						<a href="http://data.cma.cn/market/index.html">交易平台</a>
+						<div class="liNew"></div>
+					</div>
+
+					<div class="navDi"></div>
+					<div class="li">
+						<a href="http://data.cma.cn/DataCollect/index.html">数据汇交</a>
+					</div>
+
+					<div class="navDi"></div>
+					<div class="li">
+						<a href="http://data.cma.cn/data/weatherBk.html">气候背景</a>
+					</div>
+					<div class="navDi"></div>
+
+					<div class="li sf-menu">
+
+						<a href="javascript:void(0)">在线展示</a>
+						<ul class="sf_sec_ul">
+							<li>
+								<a href="javascript:void(0);" class="erji" onmouseout="javascript:reset_par(this)" onmouseover="javascript:zsej_par(this)">实况资料&nbsp;&nbsp;<img src="images/xsj2.png"></a>
+
+								<ul class="sf_thr_ul">
+
+									<li class="sanji_li">
+										<a href="http://data.cma.cn/data/online.html?t=1" class="sanji" onmouseover="javascript:zsej(this)" onmouseout="reset_zsej(this)">地面观测</a>
+									</li>
+									<li class="sanji_li">
+										<a href="http://data.cma.cn/data/online.html?t=3" class="sanji" onmouseover="javascript:zsej(this)" onmouseout="reset_zsej(this)">卫星云图</a>
+									</li>
+									<li class="sanji_li">
+										<a href="http://data.cma.cn/data/online.html?t=4" class="sanji" onmouseover="javascript:zsej(this)" onmouseout="reset_zsej(this)">雷达产品</a>
+									</li>
+									<li class="sanji_li">
+										<a href="http://data.cma.cn/data/online.html?t=6" class="sanji" onmouseover="javascript:zsej(this)" onmouseout="reset_zsej(this)">降水融合</a>
+									</li>
+									<li class="sanji_li sf_zh">
+										<a href="http://data.cma.cn/data/online.html?t=7" class="sanji" onmouseover="javascript:zsej(this)" onmouseout="reset_zsej(this)">陆面同化</a>
+									</li>
+
+								</ul>
+							</li>
+
+							<li>
+								<a href="http://data.cma.cn/analysis/gis.html" class="erji" target="_blank">GIS综合展示</a>
+
+							</li>
+
+						</ul>
+
+					</div>
+					<div class="navDi"></div>
+					<div class="li">
+						<a href="http://data.cma.cn/article/getLeft/id/249/keyIndex/1.html">用户支持</a>
+					</div>
+					<div class="navDi"></div>
+					<div class="li sf-menu">
+						<a href="javascript:void(0)" style="background:none">关于我们</a>
+
+						<ul class="sf_sec_ul">
+							<li>
+								<a href="http://data.cma.cn/article/getLeft/id/270/keyIndex/1.html" class="erji" onmousemove="javascript:zsej_par(this)">平台概况</a>
+
+							</li>
+
+							<li>
+								<a href="http://data.cma.cn/article/getLeft/id/269/keyIndex/2.html" class="erji">关于我们</a>
+
+							</li>
+
+							<li class="lastli">
+								<a href="http://data.cma.cn/article/getLeft/id/354/keyIndex/2.html" class="erji">宣传片</a>
+
+							</li>
+
+						</ul>
+
+					</div>
+					<form class="search12" action="http://data.cma.cn/search/keywords.html" method="post">
+						<input type="text" placeholder="search" name="keywords" id="search" value=""><input type="submit" class="icon" value="">
+					</form>
+				</div>
+				
+			</div>
+			<div class="Crumbs-line12" style="display: none">
+				<div class="Crumbs">
+					<a href="http://data.cma.cn/">首页</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="content" style="min-height: 300px;">
+			<div class="body-content clearfix">
+				<div class="body-content-topDiv">
+					<div class="important-documentDiv">
+						<div class="important-documentDivTitle">
+							<div class="important-documentDivTitleIc"></div>
+							<div class="important-documentDivTitleTe">重要资料推荐</div>
+						</div>
+						<ul>
+							<li>
+								<div class="important-document-list-div">
+									<div class="important-document-list-divTop">
+										<i class="important-document-icon important-document-icon1"></i>
+										<div>地面气象资料</div>
+									</div>
+									<div class="important-document-list-divBottom">
+										<a href="http://data.cma.cn/data/detail/dataCode/A.0012.0001.html" title="">中国地面逐小时资料</a>&nbsp;|&nbsp;
+										<a href="http://data.cma.cn/data/detail/dataCode/A.0013.0001.html" title="">全球地面定时资料</a>
+									</div>
+									<div class="slide-right-arrowDiv"></div>
+									<div class="slide-div">
+										<div class="slide-div-title"><i class="icon"></i><label>中国地面气象站基本气象要素观测资料</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/A.0012.0001.html" title="">中国地面气象站逐小时观测资料</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>全球地面气象站观测资料</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/A.0013.0001.html" title="">全球地面气象站定时观测资料</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>中国地面气候标准值数据集</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/A.0029.0001.html" title="">中国地面累年值日值数据集(1981-2010年）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/A.0029.0002.html" title="">中国地面累年值候值数据集(1981-2010年）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/A.0029.0003.html" title="">中国地面累年值旬值数据集(1981-2010年）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/A.0029.0004.html" title="">中国地面累年值月值数据集(1981-2010年）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/A.0029.0005.html" title="">中国地面累年值年值数据集(1981-2010年）</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</li>
+							<li>
+								<div class="important-document-list-div">
+									<div class="important-document-list-divTop">
+										<i class="important-document-icon important-document-icon2"></i>
+										<div>高空气象资料</div>
+									</div>
+									<div class="important-document-list-divBottom">
+										<a href="http://data.cma.cn/data/detail/dataCode/B.0011.0001C.html" title="">中国高空定时资料</a>&nbsp;|&nbsp;
+										<a href="http://data.cma.cn/data/detail/dataCode/B.0011.0001.html" title="">全球高空定时资料</a>
+									</div>
+									<div class="slide-right-arrowDiv"></div>
+									<div class="slide-div">
+										<div class="slide-div-title"><i class="icon"></i><label>中国高空气象站观测资料</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/B.0011.0001C.html" title="">中国高空气象站定时值观测资料</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>全球高空气象站观测资料</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/B.0011.0001.html" title="">全球高空气象站定时值资料</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>中国高空气候标准值数据集</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/B.0021.0001.html" title="">中国高空规定层累年旬值（1981-2010年）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/B.0021.0002.html" title="">中国高空规定层累年月值（1981-2010年）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/B.0021.0003.html" title="">中国高空规定层累年年值（1981-2010年）</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</li>
+							<li>
+								<div class="important-document-list-div">
+									<div class="important-document-list-divTop">
+										<i class="important-document-icon important-document-icon3"></i>
+										<div>卫星探测资料</div>
+									</div>
+									<div class="important-document-list-divBottom">
+										<a href="http://data.cma.cn/data/detail/dataCode/SK.0564.001.html" title="">大海区云图(IR1)</a>&nbsp;|&nbsp;
+										<a href="http://data.cma.cn/data/detail/dataCode/SK.0788.001.html" title="">扫描辐射计L1数据</a>
+									</div>
+									<div class="slide-right-arrowDiv"></div>
+									<div class="slide-div">
+										<div class="slide-div-title"><i class="icon"></i><label>中国风云静止气象卫星资料</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0529.001.html" title="">全圆盘标称图像文件</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0564.001.html" title="">大海区云图(IR1)</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0591.001.html" title="">中国陆地区域云图(IR1)</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0544.001.html" title="">标称格式3小时射出长波辐射产品</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>中国风云极轨气象卫星资料</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0788.001.html" title="">扫描辐射计L1数据</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0758.001.html" title="">中分辨率光谱成像仪L1数据（250M）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0792.001.html" title="">VIRR射出长波辐射日产品</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/SK.0784.001.html" title="">VIRR海洋气溶胶日产品</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</li>
+							<li>
+								<div class="important-document-list-div">
+									<div class="important-document-list-divTop">
+										<i class="important-document-icon important-document-icon4"></i>
+										<div>天气雷达探测资料</div>
+									</div>
+									<div class="important-document-list-divBottom">
+										<a href="http://data.cma.cn/data/detail/dataCode/J.0010.0001.html" title="">雷达基数据</a>&nbsp;|&nbsp;
+										<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0001.html" title="">基本反射率</a>
+									</div>
+									<div class="slide-right-arrowDiv"></div>
+									<div class="slide-div">
+										<div class="slide-div-title"><i class="icon"></i><label>新一代天气雷达基数据</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0010.0001.html" title="">多普勒雷达基数据</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>新一代天气雷达图像产品（实时）</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0001.html" title="">基本反射率图像产品（实时）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0003.html" title="">组合反射率图像产品（实时）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0002.html" title="">垂直累积液态水含量图像产品（实时）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0004.html" title="">1小时累计降水图像产品（实时）</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>新一代天气雷达图像产品（打包）</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0001P.html" title="">基本反射率图像产品（打包）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0003P.html" title="">组合反射率图像产品（打包）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0002P.html" title="">垂直累积液态水含量图像产品（打包）</a>
+											</div>
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/J.0012.0004P.html" title="">1小时累计降水图像产品（打包）</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</li>
+							<li>
+								<div class="important-document-list-div">
+									<div class="important-document-list-divTop">
+										<i class="important-document-icon important-document-icon5"></i>
+										<div>数值预报模式产品</div>
+									</div>
+									<div class="important-document-list-divBottom">
+										<a href="http://data.cma.cn/data/detail/dataCode/F.0003.0001.html" title="">T639模式产品</a>&nbsp;|&nbsp;
+										<a href="http://data.cma.cn/data/detail/dataCode/F.0009.0001.html" title="">GRAPES模式产品</a>
+									</div>
+									<div class="slide-right-arrowDiv"></div>
+									<div class="slide-div">
+										<div class="slide-div-title"><i class="icon"></i><label>T639全球中期天气数值预报系统模式产品</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/F.0003.0001.html" title="">T639全球中期天气数值预报系统模式产品</a>
+											</div>
+										</div>
+										<div class="slide-div-title"><i class="icon"></i><label>GRAPES_MESO中国及周边区域数值预报产品</label></div>
+										<div class="slide-div-content clearfix">
+											<div class="slide-div-text">
+												<a href="http://data.cma.cn/data/detail/dataCode/F.0009.0001.html" title="">GRAPES_MESO中国及周边区域数值预报产品</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="classfy-banners12Div">
+						<div class="classfy-banners12">
+							<div class="banner-nav-cont">
+								<div class="banner-nav-list12 showBanner">
+									<h4 class="banner-nav12">
+								地面观测							</h4>
+									<div class="bannerCont12">
+										<div class="banner12">
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000005&amp;dataTime=20170809030000">
+												<img src="images/img1.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000010&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM010040&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img3.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM040100&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img1.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM100200&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<ul class="bannerIcon12">
+												<li class=""></li>
+												<li class="current"></li>
+												<li class=""></li>
+												<li class=""></li>
+												<li class=""></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="banner-nav-list12">
+									<h4 class="banner-nav12">
+								卫星云图							</h4>
+									<div class="bannerCont12">
+										<div class="banner12">
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000005&amp;dataTime=20170809030000">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000010&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM010040&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img3.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM040100&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img1.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM100200&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<ul class="bannerIcon12">
+												<li class=""></li>
+												<li class=""></li>
+												<li class="current"></li>
+												<li class=""></li>
+												<li class=""></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="banner-nav-list12">
+									<h4 class="banner-nav12">
+								雷达拼图							</h4>
+									<div class="bannerCont12">
+										<div class="banner12">
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000005&amp;dataTime=20170809030000">
+												<img src="images/img3.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000010&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM010040&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img3.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM040100&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img1.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM100200&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<ul class="bannerIcon12">
+												<li class=""></li>
+												<li class=""></li>
+												<li class="current"></li>
+												<li class=""></li>
+												<li class=""></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="banner-nav-list12">
+									<h4 class="banner-nav12">
+								CLDAS产品							</h4>
+									<div class="bannerCont12">
+										<div class="banner12">
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000005&amp;dataTime=20170809030000">
+												<img src="images/img1.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM000010&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM010040&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img3.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM040100&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img1.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<a href="http://data.cma.cn/data/online.html?dataCode=NAFP_CLDAS2.0_RT_JPG_SM100200&amp;dataTime=20170809030000" style="display: none;">
+												<img src="images/img2.png" style="height: 390px;">
+												<span></span>
+											</a>
+											<ul class="bannerIcon12">
+												<li class=""></li>
+												<li class=""></li>
+												<li class="current"></li>
+												<li class=""></li>
+												<li class=""></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="yhzc-boxDiv" style="margin-left: 9px;">
+						<div class="yhzc-boxDivTop">
+							<div class="boxDivTopTi">
+								<div class="boxDivTopTiIc"></div>
+								<div class="boxDivTopTiTe">天气预报</div>
+							</div>
+							<div class="boxDivTop-header">
+								<div class="boxDivTop-header1">
+									<a id="forecastCityA" href="http://data.cma.cn/forecast/index.html?t=54823"><span style="" id="provinceName">济南</span></a>
+								</div>
+							</div>
+							<div class="boxDivTop-content1" style="background: url(&quot;http://image.data.cma.cn/static/image/forecast/bigIcon/0.png&quot;) center center no-repeat;"></div>
+							<div class="boxDivTop-content2">
+								<span class="boxDivTop-content3">24.5~34.5°C</span>
+								<span class="boxDivTop-content4"><a title="晴" href="javascript:void(0)" style="color:#397FD5;">晴</a></span>
+								<!--                                <span class="boxDivTop-content5" >东南风>2级</span>-->
+							</div>
+							<div class="boxDivTop-content6">
+								<!--                                <img src="images/jiangshui.png" style="vertical-align:middle"/>-->
+								<span style="" id="water">24小时降水：0.5mm</span>
+								<span class="boxDivTop-content5"><a title="南偏西2级" href="javascript:void(0)" class="foreWinA" style="">风：南偏西2级</a></span>
+							</div>
+						</div>
+						<div class="boxDivTop-header2">更换城市</div>
+						<div class="yhzc-boxDivCenter">
+							<div class="yhzcCeTo">
+								<div class="yhzcCeToIc yhzcCeToIc1"></div>
+								<div class="yhzcCeToTe">数据产品服务</div>
+							</div>
+							<div class="yhzcCeCo">
+								<a href="http://data.cma.cn/data/index.html">
+									<div class="yhzcCeCoIt yhzcCeCoIt0"><img class="yhzcCeCoItIc" src="images/yhzcCeCoItIc0.png">
+										<div class="yhzcCeCoItTe">资料清单</div>
+									</div>
+								</a>
+								<a href="http://data.cma.cn/market/marketList.html">
+									<div class="yhzcCeCoIt yhzcCeCoIt1"><img class="yhzcCeCoItIc" src="images/yhzcCeCoItIc01.png">
+										<div class="yhzcCeCoItTe">API服务</div>
+									</div>
+								</a>
+								<a href="http://data.cma.cn/data/index/0b9164954813c573.html">
+									<div class="yhzcCeCoIt yhzcCeCoIt2"><img class="yhzcCeCoItIc" src="images/yhzcCeCoItIc2.png">
+										<div class="yhzcCeCoItTe">检索定制</div>
+									</div>
+								</a>
+								<a href="http://data.cma.cn/data/online.html?t=1">
+									<div class="yhzcCeCoIt yhzcCeCoIt3"><img class="yhzcCeCoItIc" src="images/yhzcCeCoItIc3.png">
+										<div class="yhzcCeCoItTe">图像展示</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="yhzc-boxDivBottom">
+							<div class="yhzcBoTo">
+								<div class="yhzcCeToIc yhzcCeToIc2"></div>
+								<div class="yhzcCeToTe">气象知识服务</div>
+							</div>
+							<div id="KB_href_list">
+								<div class="yhzcBoCo">
+									<a href="http://k.data.cma.cn/" target="_blank"><img class="yhzcBoCoLe" src="images/kb.png"></a>
+									<div class="yhzcBoCoRi">
+										<a href="http://k.data.cma.cn/resources/search/literature?category_id=16&amp;sort=-pub_date" target="_blank">
+											<div class="yhzcBoCoRiIt">
+												<div class="yhzcBoCoRiItIc"></div>
+												<div class="yhzcBoCoRiItTe">专业文献</div>
+											</div>
+										</a>
+										<a href="http://k.data.cma.cn/resources/search/expert?category_id=19&amp;sort=_score" target="_blank">
+											<div class="yhzcBoCoRiIt">
+												<div class="yhzcBoCoRiItIc"></div>
+												<div class="yhzcBoCoRiItTe">院士专家</div>
+											</div>
+										</a>
+										<a href="http://k.data.cma.cn/resources/search/report?category_id=0&amp;sort=-pub_date" target="_blank">
+											<div class="yhzcBoCoRiIt">
+												<div class="yhzcBoCoRiItIc"></div>
+												<div class="yhzcBoCoRiItTe">科研报告</div>
+											</div>
+										</a>
+										<a href="http://k.data.cma.cn/resources/search/standard?category_id=63&amp;sort=-pub_date" target="_blank">
+											<div class="yhzcBoCoRiIt">
+												<div class="yhzcBoCoRiItIc"></div>
+												<div class="yhzcBoCoRiItTe">标准规范</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="body-content-banner">
+					<a href="http://data.cma.cn/dataCollect/index.html" target="_blank" style="text-decoration: none;">
+						<img src="images/bannerDC.png">
+					</a>
+					<!--		<a href="/data/index/0b9164954813c573.html" style='text-decoration: none;'>
+		<img src="images/new_line/baseDown.png" style = "margin-right:1.6px;">
+		</a>-->
+					<!--                <a href="/data/Grouptext.html" style='text-decoration: none;'>
+		<img src="images/new_line/sateDown.png">
+		</a>-->
+				</div>
+				<div class="body-content-dataBk">
+					<div class="dataBkTeB">气象资料</div>
+					<div class="dataBkTeS">依托全国综合气象信息共享平台（CIMISS）统一数据环境和服务接口，提供完整、及时、稳定、准确的气象数据服务。</div>
+				</div>
+				<div class="body-content-data">
+					<div class="content-dataLe">
+						<div class="body-content-dataSub body-content-dataSubSurf 1" style="width: 329px;">
+							<div class="commonTitleDiv">地面资料</div>
+							<div class="dataSubNu">
+								<div class="dataSubNuTe">共</div>
+								<div class="dataSubNuRe">27</div>
+								<div class="dataSubNuTe">类</div>
+							</div>
+							<a class="commonMore" href="http://data.cma.cn/data/index/f0fb4b55508804ca.html">
+								<div>更多&gt;</div>
+							</a>
+							<div class="dataImg"></div>
+							<div class="dataListDiv">
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面气象站逐小时观测资料" href="http://data.cma.cn/data/detail/dataCode/A.0012.0001.html" target="_blank">中国地面气象站逐小时观…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="全球地面气象站定时观测资料" href="http://data.cma.cn/data/detail/dataCode/A.0013.0001.html" target="_blank">全球地面气象站定时观测…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面累年值旬值数据集(1981-2010年）" href="http://data.cma.cn/data/detail/dataCode/A.0029.0003.html" target="_blank">中国地面累年值旬值数据…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面累年值月值数据集(1981-2010年）" href="http://data.cma.cn/data/detail/dataCode/A.0029.0004.html" target="_blank">中国地面累年值月值数据…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面累年值年值数据集(1981-2010年）" href="http://data.cma.cn/data/detail/dataCode/A.0029.0005.html" target="_blank">中国地面累年值年值数据…</a>
+								</div>
+							</div>
+						</div>
+						<div class="body-content-dataSub body-content-dataSubUper 2" style="width: 329px;">
+							<div class="commonTitleDiv">高空资料</div>
+							<div class="dataSubNu">
+								<div class="dataSubNuTe">共</div>
+								<div class="dataSubNuRe">9</div>
+								<div class="dataSubNuTe">类</div>
+							</div>
+							<a class="commonMore" href="http://data.cma.cn/data/index/e6ba725cabfddf8b.html">
+								<div>更多&gt;</div>
+							</a>
+							<div class="dataImg"></div>
+							<div class="dataListDiv">
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国高空气象站定时值观测资料" href="http://data.cma.cn/data/detail/dataCode/B.0011.0001C.html" target="_blank">中国高空气象站定时值观…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="全球高空气象站定时值资料" href="http://data.cma.cn/data/detail/dataCode/B.0011.0001.html" target="_blank">全球高空气象站定时值资…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国高空规定层累年旬值（1981-2010年）" href="http://data.cma.cn/data/detail/dataCode/B.0021.0001.html" target="_blank">中国高空规定层累年旬值…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国高空规定层累年月值（1981-2010年）" href="http://data.cma.cn/data/detail/dataCode/B.0021.0002.html" target="_blank">中国高空规定层累年月值…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国高空规定层累年年值（1981-2010年）" href="http://data.cma.cn/data/detail/dataCode/B.0021.0003.html" target="_blank">中国高空规定层累年年值…</a>
+								</div>
+							</div>
+						</div>
+						<div class="body-content-dataSub body-content-dataSubSate 9" style="width: 329px;">
+							<div class="commonTitleDiv">卫星资料</div>
+							<div class="dataSubNu">
+								<div class="dataSubNuTe">共</div>
+								<div class="dataSubNuRe">960</div>
+								<div class="dataSubNuTe">类</div>
+							</div>
+							<a class="commonMore" href="http://data.cma.cn/data/index/125cb60be7cb5b8d.html">
+								<div>更多&gt;</div>
+							</a>
+							<div class="dataImg"></div>
+							<div class="dataListDiv">
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中分辨率光谱成像仪L1数据（250M）" href="http://data.cma.cn/data/detail/dataCode/SK.0758.001.html" target="_blank">中分辨率光谱成像仪L1…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中分辨率光谱成像仪L1数据（250M）" href="http://data.cma.cn/data/detail/dataCode/SK.0758.001.html" target="_blank">中分辨率光谱成像仪L1…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="风云二号双星动画图像产品" href="http://data.cma.cn/data/detail/dataCode/SK.0574.001.html" target="_blank">风云二号双星动画图像产…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="扫描辐射计L1数据" href="http://data.cma.cn/data/detail/dataCode/SK.0788.001.html" target="_blank">扫描辐射计L1数据</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="全圆盘标称图像文件" href="http://data.cma.cn/data/detail/dataCode/SK.0529.001.html" target="_blank">全圆盘标称图像文件</a>
+								</div>
+							</div>
+						</div>
+						<div class="body-content-dataSub body-content-dataSubRada 8" style="width: 329px;">
+							<div class="commonTitleDiv">雷达资料</div>
+							<div class="dataSubNu">
+								<div class="dataSubNuTe">共</div>
+								<div class="dataSubNuRe">9</div>
+								<div class="dataSubNuTe">类</div>
+							</div>
+							<a class="commonMore" href="http://data.cma.cn/data/index/227aa07a9079550a.html">
+								<div>更多&gt;</div>
+							</a>
+							<div class="dataImg"></div>
+							<div class="dataListDiv">
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="基本反射率图像产品（实时）" href="http://data.cma.cn/data/detail/dataCode/J.0012.0001.html" target="_blank">基本反射率图像产品（实…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="组合反射率图像产品（实时）" href="http://data.cma.cn/data/detail/dataCode/J.0012.0003.html" target="_blank">组合反射率图像产品（实…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="垂直累积液态水含量图像产品（实时）" href="http://data.cma.cn/data/detail/dataCode/J.0012.0002.html" target="_blank">垂直累积液态水含量图像…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="1小时累计降水图像产品（实时）" href="http://data.cma.cn/data/detail/dataCode/J.0012.0004.html" target="_blank">1小时累计降水图像产品…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="基本反射率图像产品（打包）" href="http://data.cma.cn/data/detail/dataCode/J.0012.0001P.html" target="_blank">基本反射率图像产品（打…</a>
+								</div>
+							</div>
+						</div>
+						<div class="body-content-dataSub body-content-dataSubNafp 6" style="width: 329px;">
+							<div class="commonTitleDiv">数值预报</div>
+							<div class="dataSubNu">
+								<div class="dataSubNuTe">共</div>
+								<div class="dataSubNuRe">6</div>
+								<div class="dataSubNuTe">类</div>
+							</div>
+							<a class="commonMore" href="http://data.cma.cn/data/index/98c64da7ee348b37.html">
+								<div>更多&gt;</div>
+							</a>
+							<div class="dataImg"></div>
+							<div class="dataListDiv">
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="T639全球中期天气数值预报系统模式产品" href="http://data.cma.cn/data/detail/dataCode/F.0003.0001.html" target="_blank">T639全球中期天气数…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="GRAPES_MESO中国及周边区域数值预报产品" href="http://data.cma.cn/data/detail/dataCode/F.0009.0001.html" target="_blank">GRAPES_MESO…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="NCEP日平均、4时次/日地面再分析资料数据集" href="http://data.cma.cn/data/detail/dataCode/NAFP_NCEP_REA_MUT_SURF.html" target="_blank">NCEP日平均、4时次…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国气象局陆面数据同化系统（CLDAS-V2.0）实时产品数据集" href="http://data.cma.cn/data/detail/dataCode/NAFP_CLDAS2.0_RT.html" target="_blank">中国气象局陆面数据同化…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国气象局陆面数据同化系统（CLDAS-V2.0）近实时产品数据集" href="http://data.cma.cn/data/detail/dataCode/NAFP_CLDAS2.0_NRT.html" target="_blank">中国气象局陆面数据同化…</a>
+								</div>
+							</div>
+						</div>
+						<div class="body-content-dataSub body-content-dataSubServ 10" style="width: 329px;">
+							<div class="commonTitleDiv">服务产品</div>
+							<div class="dataSubNu">
+								<div class="dataSubNuTe">共</div>
+								<div class="dataSubNuRe">21</div>
+								<div class="dataSubNuTe">类</div>
+							</div>
+							<a class="commonMore" href="http://data.cma.cn/data/index/ebc438f839c777fd.html">
+								<div>更多&gt;</div>
+							</a>
+							<div class="dataImg"></div>
+							<div class="dataListDiv">
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面降水日值0.5°×0.5°格点数据集(V2.0)" href="http://data.cma.cn/data/detail/dataCode/SURF_CLI_CHN_PRE_DAY_GRID_0.5.html" target="_blank">中国地面降水日值0.5…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面降水月值0.5°×0.5°格点数据集(V2.0)" href="http://data.cma.cn/data/detail/dataCode/SURF_CLI_CHN_PRE_MON_GRID_0.5.html" target="_blank">中国地面降水月值0.5…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面气温日值0.5°×0.5°格点数据集(V2.0)" href="http://data.cma.cn/data/detail/dataCode/SURF_CLI_CHN_TEM_DAY_GRID_0.5.html" target="_blank">中国地面气温日值0.5…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国地面气温月值0.5°×0.5°格点数据集(V2.0)" href="http://data.cma.cn/data/detail/dataCode/SURF_CLI_CHN_TEM_MON_GRID_0.5.html" target="_blank">中国地面气温月值0.5…</a>
+								</div>
+								<div class="dataList">
+									<div class="dataListIcon"></div>
+									<a title="中国自动站与CMORPH降水产品融合的逐时降水量网格数据集（1.0版）" href="http://data.cma.cn/data/detail/dataCode/SEVP_CLI_CHN_MERGE_CMP_PRE_HOUR_GRID_0.10.html" target="_blank">中国自动站与CMORP…</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content-dataRi" style="width: 208px;">
+						<div class="content-dataRiTo">
+							<div class="commonTitleUl">下载排行</div>
+							<div class="dataRiToCo">
+								<div class="downloadList">
+									<div class="dlRaIcon dlRaIcon1"></div>
+									<a href="http://data.cma.cn/data/detail/dataCode/A.0012.0001.html" title="中国地面气象站基本气象要素逐小时观测资料">中国地面气象站基本气…</a>
+								</div>
+								<div class="downloadList">
+									<div class="dlRaIcon dlRaIcon2"></div>
+									<a href="http://data.cma.cn/data/detail/dataCode/A.0013.0001.html" title="全球地面气象站定时观测资料">全球地面气象站定时观…</a>
+								</div>
+								<div class="downloadList">
+									<div class="dlRaIcon dlRaIcon3"></div>
+									<a href="http://data.cma.cn/data/detail/dataCode/NAFP_CLDAS2.0_RT.html" title="中国气象局陆面数据同化系统（CLDAS-V2.0）实时产品数据集">中国气象局陆面数据同…</a>
+								</div>
+								<div class="downloadList">
+									<div class="dlRaIcon dlRaIcon4"></div>
+									<a href="http://data.cma.cn/data/detail/dataCode/A.0029.0001.html" title="中国地面累年值日值数据集(1981-2010年）">中国地面累年值日值数…</a>
+								</div>
+								<div class="downloadList">
+									<div class="dlRaIcon dlRaIcon5"></div>
+									<a href="http://data.cma.cn/data/detail/dataCode/SURF_CLI_CHN_MUL_DAY_CES_V3.0.html" title="中国地面国际交换站气候资料日值数据集(V3.0)">中国地面国际交换站气…</a>
+								</div>
+							</div>
+						</div>
+						<div class="content-dataRiBo">
+							<div class="commonTitleUl">热点词汇</div>
+							<div class="dataRiBoCo">
+
+								<script type="text/javascript">
+									var word_list = [
+										{ text: "Lorem", weight: 13, link: "https://github.com/DukeLeNoir/jQCloud" },
+										{ text: "Ipsum", weight: 10.5, html: { title: "My Title", "class": "custom-class" }, link: { href: "http://jquery.com/", target: "_blank" } },
+										{ text: "Dolor", weight: 9.4 },
+										{ text: "Sit", weight: 8 },
+										{ text: "Amet", weight: 6.2 },
+										{ text: "Consectetur", weight: 5 },
+										{ text: "Adipiscing", weight: 5 },
+										{ text: "Elit", weight: 5 },
+										{ text: "Nam et", weight: 5 },
+										{ text: "Leo", weight: 4 },
+										{ text: "Sapien", weight: 4 },
+										{ text: "Pellentesque", weight: 3 },
+										{ text: "habitant", weight: 3 },
+										{ text: "morbi", weight: 3 },
+										{ text: "tristisque", weight: 3 },
+										{ text: "senectus", weight: 3 },
+										{ text: "et netus", weight: 3 },
+										{ text: "et malesuada", weight: 3 },
+										{ text: "fames", weight: 2 },
+										{ text: "ac turpis", weight: 2 },
+										{ text: "egestas", weight: 2 },
+										{ text: "Aenean", weight: 2 },
+										{ text: "vestibulum", weight: 2 },
+										{ text: "elit", weight: 2 },
+										{ text: "sit amet", weight: 2 },
+										{ text: "metus", weight: 2 },
+										{ text: "adipiscing", weight: 2 },
+										{ text: "ut ultrices", weight: 2 },
+										{ text: "justo", weight: 1 },
+										{ text: "dictum", weight: 1 },
+										{ text: "Ut et leo", weight: 1 },
+										{ text: "metus", weight: 1 },
+										{ text: "at molestie", weight: 1 },
+										{ text: "purus", weight: 1 },
+										{ text: "Curabitur", weight: 1 },
+										{ text: "diam", weight: 1 },
+										{ text: "dui", weight: 1 },
+										{ text: "ullamcorper", weight: 1 },
+										{ text: "id vuluptate ut", weight: 1 },
+										{ text: "mattis", weight: 1 },
+										{ text: "et nulla", weight: 1 },
+										{ text: "Sed", weight: 1 }
+									];
+
+									var wordList = [{ "text": "\u6c14\u6e29", "weight": 8, "link": "\/search\/keywords.html?keywords=%E6%B0%94%E6%B8%A9", "html": { "class": "jqcloudSize" } }, { "text": "\u964d\u6c34", "weight": "7", "link": "\/search\/keywords.html?keywords=%E9%99%8D%E6%B0%B4" }, { "text": "\u5e72\u65f1", "weight": "5", "link": "\/search\/keywords.html?keywords=%E5%B9%B2%E6%97%B1" }, { "text": "\u66b4\u96e8", "weight": "8", "link": "\/search\/keywords.html?keywords=%E6%9A%B4%E9%9B%A8", "html": { "class": "jqcloudSize" } }, { "text": "\u6d2a\u6d9d", "weight": "6.2", "link": "\/search\/keywords.html?keywords=%E6%B4%AA%E6%B6%9D" }, { "text": "\u536b\u661f", "weight": "5", "link": "\/search\/keywords.html?keywords=%E5%8D%AB%E6%98%9F" }, { "text": "\u96f7\u8fbe", "weight": "4", "link": "\/search\/keywords.html?keywords=%E9%9B%B7%E8%BE%BE", "html": { "class": "jqcloudSize" } }, { "text": "\u81ed\u6c27", "weight": "4", "link": "\/search\/keywords.html?keywords=%E8%87%AD%E6%B0%A7" }, { "text": "\u6e7f\u5ea6", "weight": "2", "link": "\/search\/keywords.html?keywords=%E6%B9%BF%E5%BA%A6" }, { "text": "\u98ce", "weight": "2", "link": "\/search\/keywords.html?keywords=%E9%A3%8E", "html": { "class": "jqcloudSize" } }, { "text": "\u5168\u7403", "weight": "2", "link": "\/search\/keywords.html?keywords=%E5%85%A8%E7%90%83" }, { "text": "\u4e2d\u56fd", "weight": "2", "link": "\/search\/keywords.html?keywords=%E4%B8%AD%E5%9B%BD" }, { "text": "\u9752\u85cf\u9ad8\u539f", "weight": "2", "link": "\/search\/keywords.html?keywords=%E9%9D%92%E8%97%8F%E9%AB%98%E5%8E%9F", "html": { "class": "jqcloudSize" } }, { "text": "\u957f\u6c5f\u4e2d\u4e0b\u6e38", "weight": "1", "link": "\/search\/keywords.html?keywords=%E9%95%BF%E6%B1%9F%E4%B8%AD%E4%B8%8B%E6%B8%B8" }, { "text": "\u5e74", "weight": "1", "link": "\/search\/keywords.html?keywords=%E5%B9%B4" }, { "text": "\u6708", "weight": "1", "link": "\/search\/keywords.html?keywords=%E6%9C%88", "html": { "class": "jqcloudSize" } }, { "text": "\u65e5", "weight": "1", "link": "\/search\/keywords.html?keywords=%E6%97%A5" }, { "text": "\u5b9a\u65f6", "weight": "1", "link": "\/search\/keywords.html?keywords=%E5%AE%9A%E6%97%B6" }];
+									$(function() {
+										$("#my_favorite_latin_words").jQCloud(wordList);
+									});
+								</script>
+
+								<div id="my_favorite_latin_words" style="width: 173px; height: 135px;" class="jqcloud"><span id="my_favorite_latin_words_word_0" class="w10 jqcloudSize" style="position: absolute; left: 46.5px; top: 45.5px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E6%25B0%2594%25E6%25B8%25A9">气温</a></span><span id="my_favorite_latin_words_word_8" class="w2" style="position: absolute; left: 61.1019px; top: 21.8764px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E6%25B9%25BF%25E5%25BA%25A6">湿度</a></span><span id="my_favorite_latin_words_word_9" class="w2 jqcloudSize" style="position: absolute; left: 2.76195px; top: 66.5274px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E9%25A3%258E">风</a></span><span id="my_favorite_latin_words_word_10" class="w2" style="position: absolute; left: 70.4849px; top: 102.993px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E5%2585%25A8%25E7%2590%2583">全球</a></span><span id="my_favorite_latin_words_word_11" class="w2" style="position: absolute; left: 114.636px; top: 101.225px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E4%25B8%25AD%25E5%259B%25BD">中国</a></span><span id="my_favorite_latin_words_word_13" class="w1" style="position: absolute; left: 90.8542px; top: 9.06731px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E9%2595%25BF%25E6%25B1%259F%25E4%25B8%25AD%25E4%25B8%258B%25E6%25B8%25B8">长江中下游</a></span><span id="my_favorite_latin_words_word_14" class="w1" style="position: absolute; left: 131.643px; top: 57.8065px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E5%25B9%25B4">年</a></span><span id="my_favorite_latin_words_word_16" class="w1" style="position: absolute; left: 107.303px; top: 26.404px;"><a href="http://data.cma.cn/search/keywords.html?keywords=%25E6%2597%25A5">日</a></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="body-content-NoticeBk"></div>
+				<div class="body-content-Notice">
+					<div class="body-content-NoticeSub body-content-NoticeSubLaw">
+						<div class="commonTitleUl">法律法规</div>
+						<a href="http://data.cma.cn/article/getQxf/id/246/keyIndex/1.html" target="_blank">
+							<div class="body-content-NoticeSubLawQXF">
+								<!--<img src="images/qixiangfa.jpg">-->
+							</div>
+						</a>
+						<a href="http://data.cma.cn/article/getQxf/id/271/keyIndex/2.html" target="_blank">
+							<div class="body-content-NoticeSubLawQXF body-content-NoticeSubLawGLF">
+								<!--<img src="images/guanlifa.jpg">-->
+							</div>
+						</a>
+						<a href="http://data.cma.cn/data/cdcindex/cid/0b9164954813c573.html" target="_blank">
+							<div class="body-content-NoticeSubLawQXF body-content-NoticeSubLawSha">
+								<!--<img src="images/guanlifa.jpg">-->
+							</div>
+						</a>
+					</div>
+					<div class="body-content-NoticeSub body-content-NoticeSubWork">
+						<div class="commonTitleUl">动态资讯</div>
+						<a class="commonMore" href="http://data.cma.cn/article/getList/cateId/3.html">
+							<div>更多&gt;</div>
+						</a>
+						<div class="listWork listWork1">
+							<div class="listWorkIcon"></div>
+							<a href="http://data.cma.cn/site/article/id/28977.html" title="中国气象数据网走进山东科技大学">中国气象数据网走进山东科技大…（07.27）</a>
+						</div>
+						<div class="listWork listWork2">
+							<div class="listWorkIcon"></div>
+							<a href="http://data.cma.cn/site/article/id/28972.html" title="第五届共享杯大赛通知">第五届共享杯大赛通知（06.23）</a>
+						</div>
+						<div class="listWork listWork3">
+							<div class="listWorkIcon"></div>
+							<a href="http://data.cma.cn/site/article/id/28965.html" title="中国气象局被世界气象组织认定为世界气象中心 我国气象业务服务整体水平迈入世界先进行列">中国气象局被世界气象组织认定…（06.16）</a>
+						</div>
+						<div class="listWork listWork4">
+							<div class="listWorkIcon"></div>
+							<a href="http://data.cma.cn/site/article/id/28973.html" title="中国气象局被世界气象组织认定为世界气象中心">中国气象局被世界气象组织认定…（06.10）</a>
+						</div>
+						<div class="listWork listWork5">
+							<div class="listWorkIcon"></div>
+							<a href="http://data.cma.cn/site/article/id/28962.html" title="国家气象信息中心携现代气象信息业务主要成就亮相“气象科技活动周”">国家气象信息中心携现代气象信…（05.30）</a>
+						</div>
+					</div>
+					<div class="body-content-NoticeSub body-content-NoticeSubScience" style="width: 538px;">
+						<div class="commonTitleUl">气象科普</div>
+						<a class="commonMore" href="http://data.cma.cn/article/getList/cateId/4.html">
+							<div>更多&gt;</div>
+						</a>
+						<div class="scienceFiPo">
+							<a href="http://data.cma.cn/site/article/id/28979.html" title="一图读懂|数据揭秘：立秋晚热死牛？靠谱吗！">
+								<div class="scienceFi"><img src="images/qixiangImg.png">
+									<div class="scienceFiBa"></div>
+									<div class="scienceFiBaTe">一图读懂|数据揭秘：立…</div>
+								</div>
+							</a>
+							<div class="commonListDiv">
+								<div class="listScience">
+									<div class="listScienceIcon"></div>
+									<a href="http://data.cma.cn/site/article/id/28979.html" title="一图读懂|数据揭秘：立秋晚热死牛？靠谱吗！">一图读懂|数据揭秘：立秋晚热死牛？…</a>
+								</div>
+								<div class="listScience">
+									<div class="listScienceIcon"></div>
+									<a href="http://data.cma.cn/site/article/id/28978.html" title="高温使者：副热带高压">高温使者：副热带高压</a>
+								</div>
+								<div class="listScience">
+									<div class="listScienceIcon"></div>
+									<a href="http://data.cma.cn/site/article/id/28975.html" title="汛情安全明白卡之高温">汛情安全明白卡之高温</a>
+								</div>
+								<div class="listScience">
+									<div class="listScienceIcon"></div>
+									<a href="http://data.cma.cn/site/article/id/28974.html" title="气象大数据怎么玩">气象大数据怎么玩</a>
+								</div>
+								<div class="listScience">
+									<div class="listScienceIcon"></div>
+									<a href="http://data.cma.cn/site/article/id/28968.html" title="遇到强降雨 你该怎么办？">遇到强降雨 你该怎么办？</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="body-content-bottomBk">
+					<div class="dataBkTeB">专题推荐</div>
+				</div>
+				<div class="body-content-bottom">
+					<a href="http://data.cma.cn/weatherGis/web/rd/index.html" target="_blank">
+						<div class="bottomIt"><img class="bottomItIm" src="images/subRec11.jpg">
+							<div class="bottomItTe">一带一路气象专题</div>
+						</div>
+					</a>
+					<div class="bottomDi"></div>
+					<a href="http://data.cma.cn/weatherGis/web/qyh/index" target="_blank">
+						<div class="bottomIt"><img class="bottomItIm" src="images/subRec5.png">
+							<div class="bottomItTe">第十三届全运会气象服务</div>
+						</div>
+					</a>
+					<div class="bottomDi"></div>
+					<a href="http://tipex.data.cma.cn/" target="_blank">
+						<div class="bottomIt"><img class="bottomItIm" src="images/subRec10.png">
+							<div class="bottomItTe">青藏高原大气科学试验服务专题</div>
+						</div>
+					</a>
+					<div class="bottomDi"></div>
+					<a href="http://data.cma.cn/site/showSubject/id/101.html" target="_blank">
+						<div class="bottomIt"><img class="bottomItIm" src="images/subRec2.png">
+							<div class="bottomItTe">干旱专题数据服务</div>
+						</div>
+					</a>
+				</div>
+
+				<div id="forNoticeDialog" style="display: none">
+					<div style="text-align: center;font-weight: bold;font-size: 18px;">
+						对不起，目前没有公告
+					</div>
+				</div>
+			</div>
+
+			<div class="friendLinkDiv">
+				<div class="friendLinkDivWidth">
+					<div class="friendLinkDivWidthTop">
+						<div class="friendMa"></div>
+						<div class="friendToTi">相关链接：</div>
+						<a href="http://www.cma.gov.cn/" target="_blank">
+							<div class="friendToIt">中国气象局</div>
+						</a>
+						<div class="friendToDi"></div>
+						<a href="http://www.nmic.cn/web/index.htm" target="_blank">
+							<div class="friendToIt">国家气象信息中心</div>
+						</a>
+						<div class="friendToDi"></div>
+						<a href="http://www.escience.net.cn/" target="_blank">
+							<div class="friendToIt">中国科技资源网</div>
+						</a>
+						<div class="friendToDi"></div>
+						<a href="http://www.ckcest.cn/" target="_blank">
+							<div class="friendToIt">中国工程科技知识中心</div>
+						</a>
+					</div>
+					<div class="friendLinkDivWidthCe">
+						<select class="wlink">
+							<option value="">国内气象机构</option>
+							<option value="http://www.cma.gov.cn/">中国气象局</option>
+							<option value="http://www.nmic.cn/web/index.htm">国家气象信息中心</option>
+							<option value="http://www.nsmc.org.cn/">国家卫星气象中心</option>
+							<option value="http://www.nmc.cn/">国家气象中心</option>
+							<option value="http://cdc.cma.gov.cn">气象信息共享服务网</option>
+							<option value="http://gb.weather.gov.hk/">香港天文台</option>
+							<option value="http://www.smg.gov.mo/www/c_index.php">澳门地球物理暨气象局</option>
+							<option value="http://www.cwb.gov.tw/V7/index.htm">台湾气象局</option>
+						</select>
+
+						<select class="wlink wlink1">
+							<option value="">国外气象机构</option>
+							<option value="http://www.wmo.ch/">世界气象组织</option>
+							<option value="http://www.worldweather.cn/">世界天气信息网</option>
+							<option value="http://gtn-r.bafg.de/">全球径流数据中心</option>
+						</select>
+
+						<select class="wlink">
+							<option value="">专题服务</option>
+							<option value="http://tipex.data.cma.cn/">青藏高原大气科学试验服务专题</option>
+							<option value="http://data.cma.cn/dry">干旱监测早期预警及多源干旱信息集成共享平台</option>
+						</select>
+						<div class="friendMa friendMa1"></div>
+					</div>
+					<div class="friendLinkDivWidthBottom">
+						<div class="friendListDiv">
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.nsii.org.cn/" target="_blank">
+									<div>国家标本资源共享平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://zzzy.fishinfo.cn/" target="_blank">
+									<div>水产种质资源平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.nimr.org.cn/" target="_blank">
+									<div>国家微生物资源平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.cdad-is.org.cn/" target="_blank">
+									<div>家养动物种质资源平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.nfgrp.cn/" target="_blank">
+									<div>国家林木种质资源平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.cgris.net/" target="_blank">
+									<div>国家农作物种质资源平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.cellresource.cn/" target="_blank">
+									<div>国家实验细胞资源共享平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.ncrm.org.cn/" target="_blank">
+									<div>国家标准物质资源共享平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.forestdata.cn/" target="_blank">
+									<div>林业科学数据平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.agridata.cn/" target="_blank">
+									<div>农业科学数据共享中心</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://data.earthquake.cn/" target="_blank">
+									<div>地震科学数据共享中心</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.geodata.cn/" target="_blank">
+									<div>地球系统科学数据共享平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.ncmi.cn/" target="_blank">
+									<div>人口与健康科学数据共享平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.nstl.gov.cn/" target="_blank">
+									<div>国家科技图书文献中心</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.cssn.net.cn/" target="_blank">
+									<div>国家标准文献共享服务平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.cdstm.cn/" target="_blank">
+									<div>中国数字科技馆</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.bjsims.cn/" target="_blank">
+									<div>北京离子探针中心</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.ceas.org.cn/" target="_blank">
+									<div>中国应急分析测试平台</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.npsic.cn/" target="_blank">
+									<div>国家大型科学仪器中心</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.cnern.org/" target="_blank">
+									<div>国家生态系统观测研究网络</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.nms.org.cn/" target="_blank">
+									<div>国家计量基标准资源共享基地</div>
+								</a>
+							</div>
+							<div class="friendList">
+								<div class="friendListIcon"></div>
+								<a href="http://www.ecorr.org/" target="_blank">
+									<div>国家材料环境腐蚀平台</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="marginDiv12"></div>
+
+			<!--新增天气预报遮罩层-->
+			<div class="weaterShow"></div>
+			<div class="weaterSelect">
+				<div class="weaterSelect-header">
+					<div class="weaterSelect-left">城市定制</div>
+					<div class="weaterSelect-img"></div>
+				</div>
+				<div class="weaterSelect-content">
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="54511">
+						<span>北京</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="54527">
+						<span class="select">天津</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="53698">
+						<span class="select">石家庄</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="53772">
+						<span class="select">太原</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="53463">
+						<span class="select">呼和浩特</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="54342">
+						<span class="select">沈阳</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="54161">
+						<span class="select">长春</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="50953">
+						<span class="select">哈尔滨</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="58367">
+						<span class="select">上海</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="58238">
+						<span class="select">南京</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="58457">
+						<span class="select">杭州</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="58321">
+						<span class="select">合肥</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="58847">
+						<span class="select">福州</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="58606">
+						<span class="select">南昌</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/selected-icon.png" class="province selected" id="54823">
+						<span class="select">济南</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="57083">
+						<span class="select">郑州</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="57494">
+						<span class="select">武汉</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="57687">
+						<span class="select">长沙</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="59287">
+						<span class="select">广州</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="59431">
+						<span class="select">南宁</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="59758">
+						<span class="select">海口</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="57516">
+						<span class="select">重庆</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="56290">
+						<span class="select">成都</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="57816">
+						<span class="select">贵阳</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="56778">
+						<span class="select">昆明</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="55591">
+						<span class="select">拉萨</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="57039">
+						<span class="select">西安</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="52889">
+						<span class="select">兰州</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="52866">
+						<span class="select">西宁</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="53614">
+						<span class="select">银川</span>
+					</div>
+					<div class="select-content1">
+						<img src="./中国气象数据网_files/circle-icon.png" class="province" id="51463">
+						<span class="select">乌鲁木齐</span>
+					</div>
+				</div>
+				<div class="weaterSelect-tail">
+					<img src="./中国气象数据网_files/buttom_bc.png" id="buttom_bc">
+					<img src="./中国气象数据网_files/buttom_qx.png" id="buttom_qx">
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="footer-bg14 hu_footer">
+			<div class="footer">
+				<div class="footer-help">
+					<a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备05004897号-1</a>
+					<a>&nbsp;|&nbsp;</a>
+					<a href="http://data.cma.cn/article/getLeftList/cateId/9/keyIndex/5.html">常见问题</a>
+					<a>&nbsp;|&nbsp;</a>
+					<a href="http://data.cma.cn/site/map.html">网站地图</a>
+				</div>
+				<div class="footer-message" style="background:none;">
+					<p>Copyright 2005-2017 国家气象信息中心(中国气象局气象数据中心)</p>
+					<p>地址 : 北京海淀区中关村南大街46号 邮编 : 100081</p>
+					<p>E_mail : data@cma.gov.cn 电话 : (8610)68407499</p>
+				</div>
+				<div class="footerIc"><span id="_ideConac"><a href="http://bszs.conac.cn/sitename?method=show&amp;id=55470945D4C60FCDE053022819AC305E" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="images/blue.png" data-bd-imgshare-binded="1"></a></span>
+				</div>
+				<div class="footerIc1">
+					<div class="footerIc1Im"></div>
+				</div>
+				<div class="footerIc2">
+					<div class="footerIc2Im"></div>
+				</div>
+				<div class="footerIc3"></div>
+				<div class="footerIc4"></div>
+				<div class="footerIc5">
+					<div class="footerIc3Im"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mark"></div>
+		<div class="logIn" style="left: 512.5px; top: 224.5px;">
+			<div class="logIn-title" style="top:0px !important;"></div>
+			<div style="border-bottom: 1px solid #D6DCE0;clear: both;margin-top: 20px;height: 30px;margin-bottom: 20px;">
+				<div style="width:46%;float:left;border-right:1px solid #D6DCE0;text-align:center;font-weight:bold;color:#E76A6C;cursor:pointer;" id="loginPhone" onclick="jumpPmg(this)">扫码登录</div>
+				<div style="float:left;width:46%;text-align:center;font-weight:bold;cursor:pointer;" id="loginWeb" onclick="jumpPmg(this)">账户登录</div>
+			</div>
+			<form class="logIn-cont" id="logIn" action="http://data.cma.cn/site/index.html" method="post" style="height:215px;">
+				<i class="icon close" style="top:-90px !important;"></i>
+				<div id="loginRu" style="display:none">
+					<div class="row">
+						<i class="icon user-icon"></i>
+						<input type="text" name="userName" id="userName" placeholder="用户名/手机号">
+					</div>
+					<div class="row">
+						<i class="icon psd-icon"></i>
+						<input type="password" name="password" id="passwordFoot" placeholder="密码" style="padding: 6px 5px">
+					</div>
+					<div class="row clearfix verifyCode-row">
+						<input type="text" class="verifycode" name="verifyCode" id="verifyCode">
+						<img id="yw0" src="./中国气象数据网_files/598a99a2894aa.html" alt="">
+						<a id="yw0_button" href="http://data.cma.cn/site/captcha/refresh/1.html">看不清换一组</a>
+					</div>
+					<div class="row clearfix">
+						<a class="forget-psd-btn" href="http://data.cma.cn/user/forgetPasswd.html"><i class="forget-psd-icon"></i>忘记密码</a>
+						<a class="register-btn" href="http://data.cma.cn/article/getLeft/id/249/keyIndex/1.html">立刻注册</a>
+					</div>
+					<button class="login-submit" type="button" id="login" style="cursor: pointer;"></button>
+				</div>
+				<div id="loginApp">
+					<!-- 相对位置和绝对位置做好遮罩层和样式 -->
+					<div id="leftDiv" style="position: absolute; top:0px;left:15px;width:160px;border:1px solid #E8EBED;padding:4px;">
+						<img src="http://data.cma.cn/site/index.html" style="cursor:pointer;" id="leftImg" width="158px">
+					</div>
+					<div class="showInvalid" style="position: absolute; top:0px;left:15px;width:160px;border:1px solid #E8EBED;padding:4px;z-index:99;filter: alpha(opacity=40);bottom:0; background:#000020;opacity:0.5;height:158px;">
+					</div>
+					<div class="showInvalid" style="position: absolute; top:0px;left:15px;width:160px;padding:4px;z-index:100;height:158px;opacity:1;font-size:14px;text-align:center;">
+						<div style="color:#fff;margin-top:50px;">二维码失效</div>
+						<div style="background:#E4393C;height:24px;width:80px;color:#fff;text-align:center;line-height:24px;margin:16px  auto;cursor:pointer;" class="clickFlash">点击刷新</div>
+					</div>
+					<div style="position: absolute; top:0px;right:40px;width:144px;" id="tsShow">
+						<img src="./中国气象数据网_files/showPhone.png" style="margin-bottom:13px;" id="rightImg">
+					</div>
+					<div style="position:absolute;top:180px;left:60px;font-size:14px;"><span>登录手机</span><span style="color:#EB8182;margin-right:26px;">中国气象数据网</span><span>扫描二维码</span></div>
+					<div style="position: absolute; top:210px;left:80px;font-size:14px;text-align:center;">
+						<img src="./中国气象数据网_files/tig1.png" class="bottom-img">
+						<span class="bottom-img" style="color:#94A7D8;cursor:pointer;"><a href="http://data.cma.cn/article/getRegister/id/338/keyIndex/1.html">立即注册</a></span>
+						<img src="./中国气象数据网_files/tig2.png" class="bottom-img">
+						<span class="bottom-img">更快</span>
+						<img src="./中国气象数据网_files/tig3.png" class="bottom-img">
+						<span class="bottom-img">更安全</span>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="right-barN">
+			<div class="right-barN-list">
+				<input name="jump" type="hidden" class="auerl" value="/order/list/type/online.html">
+				<i class="right-barN-icon order-iconN"></i>
+				<div class="right-barN-listShow"><i class="right-barN-icon order-iconN"></i>我的订单</div>
+			</div>
+			<div class="right-barN-list ">
+				<input name="jump" type="hidden" class="auerl" value="/order/carView.html">
+				<i class="right-barN-icon data-iconN"></i>
+				<div class="right-barN-listShow"><i class="right-barN-icon data-iconN"></i>我的数据筐</div>
+			</div>
+			<div class="right-barN-list ">
+				<input name="jump" type="hidden" class="auerl" value="/data/favorite.html">
+				<i class="right-barN-icon collect-iconN"></i>
+				<div class="right-barN-listShow"><i class="right-barN-icon collect-iconN"></i>我的收藏</div>
+			</div>
+			<div class="right-barN-list">
+				<input name="jump" type="hidden" class="auerl" value="/article/feedback.html">
+				<i class="right-barN-icon feedback-iconN"></i>
+				<div class="right-barN-listShow"><i class="right-barN-icon feedback-iconN"></i>用户反馈</div>
+			</div>
+			<div class="right-barN-list  right-barN-listNoBorder noneed-login">
+				<a href="http://data.cma.cn/user/online.html">
+					<i class="right-barN-icon chat-iconN"></i>
+					<div class="right-barN-listShow"><i class="right-barN-icon chat-iconN"></i>在线客服</div>
+				</a>
+			</div>
+		</div>
+		<div class="right-barN right-barNBelow">
+			<div class="right-barN-list noneed-login right-barN-listNoBorder">
+				<a href="http://data.cma.cn/site/index.html#">
+					<i class="right-barN-icon return-top-icon"></i>
+					<div class="right-barN-listShow"><i class="right-barN-icon return-top-icon"></i>返回顶部</div>
+				</a>
+			</div>
+		</div>
+		<div class="right-barBelt"></div>
+		<div id="forSurveyDialog" style="display: none">
+			<div style="text-align: center;font-weight: bold;font-size: 18px;">
+				对不起，目前没有公告
+			</div>
+		</div>
+		<div id="welive_online"><img src="images/small_ck.png" id="welive_tg3"></div>
+		<div id="welive_wrap">
+			<div id="welive_drag"></div>
+			<div id="welive_mouse_tracker"></div>
+			<div id="welive_close"></div>
+			<div id="welive_close_btn"></div>
+			<div id="welive_iwrap">
+				<div id="welive_iholder"><iframe id="welive_iframe" src="./中国气象数据网_files/welive1618.html" frameborder="0" scrolling="no" allowtransparency="true"></iframe></div>
+			</div>
+		</div>
+	</body>
+
+</html>

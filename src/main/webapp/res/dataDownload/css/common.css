@@ -1,0 +1,68 @@
+.logo-search{
+	color: #8d8d8d;
+}
+.nav12 div.ul div.li:hover{
+	background-color:#0091ff;
+}
+.head12 img{
+	width: auto;
+	height: auto;
+}
+.logo-search input{
+	height: 31px;
+	margin-left: 13px;
+}
+
+
+
+.important-documentDivTitle{
+	height: 50px;
+}
+.important-documentDivTitleTe{
+	margin-left: 32px;
+	margin-top: 15px;
+	font-size: 18px;
+	color: white;
+}
+
+
+.classfy-banners12{
+	border: 1px solid #DDDDDD;
+}
+
+.yhzc-boxDivTop{
+	border-bottom: 1px solid #DDDDDD;
+}
+.body-content-bottomBk{
+	height: 56px;
+}
+.body-content-dataBk{
+	height: 56px;
+}
+.footer-message{
+	background:none;
+}
+.footer-message img{
+	vertical-align: middle;
+}
+.li:hover .justTriangle{
+	background-color: red;
+	width:0; 
+	height:0; 
+	border-width:0 5px 5px 5px; 
+	border-style:solid; 
+	border-color:transparent transparent white transparent;
+	font-size:0;       
+	line-height:0;
+	position: relative;
+	top: -5px;
+	/*top: 8px;*/
+	left: 40px;
+}
+.li:hover .justTriangle{
+	background-color: #0091ff !important;
+}
+.logo-search{
+	position: relative;
+	cursor:pointer;
+}

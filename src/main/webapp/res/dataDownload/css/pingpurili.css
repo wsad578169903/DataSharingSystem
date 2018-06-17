@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    font-family: 微软雅黑;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+
+address, cite, code, em, th, i {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: "";
+}
+
+.clear {
+    clear: both;
+}
+
+/* float */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.account-box {
+    padding: 0 35px 25px 25px;
+}
+
+.account-title {
+    border-bottom: 2px solid;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.f-btn-fhby {
+    height: 30px;
+    line-height: 30px;
+    color: #f77b10;
+    border: 1px solid #f77b10;
+    font-size: 14px;
+    display: block;
+    width: 85px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.f-btn-jian {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-right: 0px;
+    margin-top: 10px;
+    text-align: center;
+    width: 20px;
+    background: #ececec;
+    color: #666;
+    border-radius: 4px;
+    position: relative;
+    left: 2px;
+    cursor: pointer;
+}
+
+.f-btn-jia {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-left: 0px;
+    margin-top: 10px;
+    text-align: center;
+    width: 20px;
+    background: #ececec;
+    color: #666;
+    border-radius: 4px;
+    position: relative;
+    left: -2px;
+    cursor: pointer;
+}
+
+.f-riqi {
+    width: 110px;
+    padding: 0 10px;
+    background: #fff;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    display: block;
+}
+
+.f-rili-table tbody td {
+    background: #fff;
+    position: relative;
+}
+
+.f-rili-table tbody tr {
+    /*border-bottom: 1px dashed #ccc;*/
+}
+
+.f-rili-table .f-today {
+    background: url("../images/tody.png") no-repeat;
+}
+
+.f-rili-table .f-on {
+    background:url("../images/on.png") no-repeat;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.f-number {
+    cursor: pointer;
+}
+
+.f-rili-table {
+    width: 100%;
+}
+
+.f-rili-th {
+    float: left;
+    width: 14.25%;
+    text-align: center;
+    line-height: 46px;
+    height: 46px;
+    color: #333;
+}
+
+.f-td {
+    /*border-bottom: 1px dashed #ccc;*/
+    float: left;
+    width: 46px;
+    text-align: center;
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+
+}
+
+
+.rili_bg{
+    background: url("../images/rili_bg.png") no-repeat;
+    min-height: 300px;
+}
+
+.rili{
+    margin-top:25px;
+}
+
+.title{
+    font-size: 16px;
+    color: rgb(0, 129, 233);
+    font-weight: bold;
+    height: 22px;
+    line-height: 22px;
+}
+.title:before{
+    content: '';
+    height: 20px;
+    width: 5px;
+    display: inline-block;
+    background:  rgb(0, 129, 233);
+    vertical-align: sub;
+}
+.content{
+    margin-top: 12px;
+}
+
+.content ul li{
+    height: 30px;
+    line-height: 30px;
+}
+
+
+.prolist{
+    height: 103px;
+    background: red;
+}
+
+
+.prolist{
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 0.25px rgba(0, 0, 0, 0.22);
+    width: 249px;
+    height: 84px;
+    padding: 12px 12px 10px 12px;
+    margin-top: 12px;
+}
+
+.prolistTitle{
+
+    font-size: 16px;
+    color: rgb(0, 129, 233);
+    height: 20px;
+    line-height: 20px;
+}
+
+.prolistContent{
+    margin-top:8px;
+}
+
+.prolistContent li{
+    height: 17px;
+    line-height: 17px;
+}
+.prolistContent li:nth-child(1):before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    background: url("../images/icon_time.png") no-repeat;
+}
+.prolistContent li:nth-child(2):before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    background: url("../images/icon_laiyuan.png") no-repeat;
+}
+.prolistContent li:nth-child(3):before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    background: url("../images/icon_leimu.png") no-repeat;
+}
+
+
+.btn-primary-only{
+    height: 24px;
+    padding:0 4px;
+    background: #0081e9;
+    color: #FFF;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+}
+.btn-primary-only:hover{
+    opacity: 0.8;
+}
+
+.pt12{
+    padding-top:12px;
+}
+
+
+.todayData{
+    margin-top: 36px;
+}
+
+

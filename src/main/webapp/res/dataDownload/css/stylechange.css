@@ -1,0 +1,2081 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: '微软雅黑' !important;
+    font-size: 14px;
+}
+
+/*大布局重置*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-build {
+    padding: 0 !important;
+}
+
+/******************************************
+ 修改密码页面
+******************************************/
+
+#login .logo {
+    height: 82px;
+    width: 550px;
+    background: url(../images/logo.png) no-repeat 0 8px;
+}
+
+.passwordFrom {
+    width: 450px;
+    margin: 80px auto;
+}
+
+.login .form-container,
+.register .form-container {
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#submitBtn {
+    border-radius: 0;
+}
+
+.btn-green:hover, .btn-green:visited {
+    background-color: #38a8fe;
+}
+
+.login_bg {
+    width: 100%;
+    height: 600px;
+    background: url(../images/retrievePassword.png);
+}
+
+.change_pwd {
+    background: #39a8fd;
+    border-radius: 0;
+    border: none;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.hintFont {
+    color: #ff3826;
+    margin-top: 7px;
+}
+
+.authCode {
+    width: 60px !important;
+    height: 38px;
+    background-color: #c7e7ff;
+    font-weight: bold;
+}
+
+.authCode {
+    width: 60px !important;
+    height: 38px;
+    background-color: #c7e7ff;
+    font-weight: bold;
+}
+
+.login .bottom-wrapper,
+.register .bottom-wrapper {
+    padding: 30px;
+}
+
+.login .login-form .has-feedback .form-control-feedback,
+.register .login-form .has-feedback .form-control-feedback,
+.login .register-form .has-feedback .form-control-feedback,
+.register .register-form .has-feedback .form-control-feedback {
+    top: 0;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+}
+
+/************************************************
+登陆界面
+************************************************/
+
+.login,
+.register {
+    padding-top: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.login .form-container,
+.register .form-container {
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#submitBtn {
+    border-radius: 0;
+}
+
+.btn-green:hover, .btn-green:visited {
+    background-color: #38a8fe;
+}
+
+.authCode {
+    width: 60px !important;
+    height: 38px;
+    background-color: #c7e7ff;
+    font-weight: bold;
+}
+
+.authCode {
+    width: 60px !important;
+    height: 38px;
+    background-color: #c7e7ff;
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.login .bottom-wrapper,
+.register .bottom-wrapper {
+    padding: 30px;
+}
+
+.content div h1, h2, h3, h4, h5, h6 {
+    line-height: 1.8;
+}
+
+/*************************************************
+注册页面
+*************************************************/
+
+.login,
+.register {
+    padding-top: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.login .form-container,
+.register .form-container {
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.body {
+    overflow-y: hidden !important;
+    font-size: 13px;
+    color: #454545;
+    font-size: 13px;
+    color: #454545;
+    background: #fafafa;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', 'Oxygen', sans-serif;
+}
+
+.btn-green {
+    background-color: #38a8fe;
+    border-color: #38a8fe;
+
+}
+
+#submitBtn {
+    border-radius: 0;
+}
+
+.btn-green:hover, .btn-green:visited {
+    background-color: #38a8fe;
+}
+
+.backgroundImg {
+    background: url(../images/retrievePassword.png);
+}
+
+.clearfix {
+    margin-top: -23px;
+}
+
+.passwordFrom {
+    margin-top: 7%;
+}
+
+.hintFont {
+    color: red;
+    margin-top: 7px;
+}
+
+.authCode {
+    width: 60px !important;
+    height: 38px;
+    background-color: #c7e7ff;
+    font-weight: bold;
+}
+
+.authCode {
+    width: 60px !important;
+    height: 38px;
+    background-color: #c7e7ff;
+    font-weight: bold;
+}
+
+/*.form-control{
+    border-radius: 0;
+}*/
+.login .bottom-wrapper,
+.register .bottom-wrapper {
+    padding: 30px;
+}
+
+.content div h1, h2, h3, h4, h5, h6 {
+    line-height: 1.8;
+}
+
+h4,
+.h4 {
+    font-size: 18px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    background: none;
+    padding: 0;
+    width: auto;
+    color: inherit;
+    text-align: inherit;
+}
+
+p {
+    background: none;
+    padding: 0;
+    margin: 0 0 10px;
+    text-align: inherit;
+    border: none;
+    font-family: inherit;
+}
+
+.login .login-form .has-feedback .form-control-feedback,
+.register .login-form .has-feedback .form-control-feedback,
+.login .register-form .has-feedback .form-control-feedback,
+.register .register-form .has-feedback .form-control-feedback {
+    top: 0px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.btn-green {
+    color: white;
+}
+
+.btn,
+button {
+    border-radius: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.logIn {
+    display: inline-block;
+    width: 15%;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: white;
+    color: #4ea9fa;
+}
+
+.btn-green:hover, .btn-green:visited {
+    background-color: white;
+    color: #4ea9fa;
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+.overall {
+    margin-left: -20px;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 9px !important;
+}
+
+.first-group {
+    margin-top: 9px !important;
+}
+
+.col-sm-2 {
+    padding-left: 0px !important;
+    margin-top: 32px;
+}
+
+.stationRegion {
+    margin-left: -50px;
+}
+
+.twoList {
+    margin-left: 25px;
+}
+
+.threeList {
+    margin-left: -52px;
+}
+
+.stationName {
+    margin-left: -52px;
+}
+
+.uploading {
+    margin-left: 150%;
+    margin-top: -10px;;
+}
+
+.save {
+    margin-top: 18px;
+
+}
+
+.fontColor {
+    color: #fe0000;
+}
+
+.rightRedFont {
+    margin-top: 40px;
+    margin-left: 130px;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    /*padding-left: 15%;*/
+    margin-left: 313px;
+}
+
+.overall {
+    margin: 0 auto;
+    box-shadow: 1px 1px 1px 2px #cecece;
+}
+
+.form-control {
+    width: 326px;
+}
+
+.inputDistance {
+    margin-left: -75px;
+}
+
+.registerTitle {
+    width: 1200px;
+    height: 56px;
+    padding-left: 100px;
+}
+
+.registerTitle li {
+    width: 250px;
+    height: 56px;
+    line-height: 56px;
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.registerTitle li a {
+    color: #727272;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    text-decoration: none;
+
+}
+
+.registerTitle li:hover {
+    border-bottom: 2px solid #4aaffd;
+
+}
+
+.underlineColor {
+    border-bottom: 2px solid #4aaffd !important;
+}
+
+.immediatelyRegister {
+    width: 155px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: #36a5fe;
+    border: 1px solid #36a5fe;
+    color: white;
+}
+
+.immediatelyRegister:hover, .immediatelyRegister:focus {
+    background-color: #36a5fe;
+    border: 1px solid #36a5fe;
+}
+
+.reset {
+    width: 155px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #fc9b4c;
+    border: 1px solid #fc9b4c;
+    color: white;
+}
+
+.reset:hover, .reset:focus {
+    background-color: #fc9b4c;
+    border: 1px solid #fc9b4c;
+}
+
+/*表单验证相关*/
+/*用户名*/
+.userName {
+
+}
+
+.userNameHint {
+    display: none;
+}
+
+/*密码*/
+.userPassword {
+
+}
+
+.userPasswordHint {
+    display: none;
+}
+
+/*密码确认*/
+.passwordConfirm {
+
+}
+
+.passwordConfirmHint {
+    display: none;
+}
+
+/*真实姓名*/
+.realName {
+
+}
+
+.realNameHint {
+    display: none;
+}
+
+/*国家*/
+.state {
+
+}
+
+.stateHint {
+    display: none;
+}
+
+/*省*/
+.province {
+
+}
+
+.provinceHint {
+    display: none;
+}
+
+/*领域分类*/
+.domainClassification {
+
+}
+
+.domainClassificationHint {
+    display: none;
+}
+
+/*行业*/
+.industry {
+
+}
+
+.industryHint {
+    display: none;
+}
+
+/*证件类型*/
+.certificateType {
+
+}
+
+.certificateTypeHint {
+    display: none;
+}
+
+/*证件号码*/
+.IDNumber {
+
+}
+
+.IDNumberHint {
+    display: none;
+}
+
+/*使用目的*/
+.intendedUse {
+
+}
+
+.intendedUseHint {
+    display: none;
+}
+
+/*学历*/
+.education {
+
+}
+
+.educationHint {
+    display: none;
+}
+
+/*专业*/
+.major {
+
+}
+
+.majorHint {
+    display: none;
+}
+
+/*通讯地址*/
+.mailingAddress {
+
+}
+
+.mailingAddressHint {
+    display: none;
+}
+
+/*证件号码*/
+.otherNamber {
+
+}
+
+.otherNamberHint {
+    display: none;
+}
+
+/*邮政编码*/
+.postalCode {
+
+}
+
+.postalCodeHint {
+    display: none;
+}
+
+/*手机号码*/
+.cellPhoneNumber {
+
+}
+
+.cellPhoneNumberHint {
+    display: none;
+}
+
+/*工作单位*/
+.unit {
+
+}
+
+.unitHint {
+    display: none;
+}
+
+/***************************************************************************/
+
+/*导航样式*/
+
+
+/*******************************************/
+.footer {
+    width: 100%;
+}
+
+.hintBag {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    margin: auto;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    line-height: 30px;
+    border-bottom: 1px solid #dddddd;
+    padding-left: 70px;
+}
+
+.hintBag span {
+    color: #999999;
+    padding-left: 50px;
+}
+
+.important-document-list-divTop div {
+    padding-top: 28px;
+    font: 18px '微软雅黑';
+}
+
+.boxDivTop-content2 {
+    border-bottom: none;
+}
+
+.dataBkTeB {
+    color: white;
+    font-weight: 100;
+}
+
+.friendList {
+    width: 163px;
+}
+
+.friendList a {
+    color: #737373;
+    font-size: 12px;
+}
+
+.footer-bg14 {
+    background-color: #469fe3;
+    border-top: 1px solid #469fe3;
+    height: 151px;
+}
+
+.footer {
+    background-color: #469fe3;
+}
+
+.footer-help a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-message p {
+    color: white;
+    font-size: 14px;
+}
+
+.yhzcCeCoIt0 {
+    margin-left: 60px;
+}
+
+.yhzc-boxDivBottom .dataList {
+    margin-left: 36px;
+}
+
+.important-documentDivTitle {
+    background-color: #62b2ef;
+}
+
+.yhzc-boxDivTop {
+    padding-left: 0;
+}
+
+.boxDivTop-content6 {
+    right: 90px;
+}
+
+.boxDivTop-content6 p {
+    font-size: 14px;
+}
+
+.boxDivTop-content2 {
+    right: 88px;
+    top: 60px;
+}
+
+.boxDivTop-content2 p {
+    font-size: 14px;
+}
+
+.region {
+    line-height: 70px;
+    position: absolute;
+    right: 232px;
+    top: 14px;
+}
+
+#provinceName {
+    margin-left: 105px;
+    margin-top: 3px;
+}
+
+.boxDivTop-header2 {
+    margin-left: 172px;
+}
+
+.boxDivTop-header2 {
+    margin-top: -95px;
+}
+
+.yhzc-boxDivTop {
+    background-color: white;
+}
+
+.yhzcCeToIc {
+    background: url(../images/contentUser.png) no-repeat;
+}
+
+.boxDivTopTiIcOne {
+    /*background: url(images/contentAir.png) no-repeat;*/
+}
+
+.boxDivTopTiTe {
+    margin-left: 20px;
+}
+
+.yhzcCeCoItTe {
+    width: 60px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.materialContentWidth {
+    width: 270px;
+    margin-left: 20px;
+}
+
+.friendLinkDivWidthBottom {
+    height: 140px;
+}
+
+.commonTitleDiv {
+    width: 270px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.dataListDiv {
+    margin-left: 115px;
+    margin-top: 3px;
+}
+
+.dataImg {
+    margin-top: 71px;
+}
+
+.body-content-data {
+    border: none;
+}
+
+.body-content-dataSubRada {
+    border-right: none;
+}
+
+.body-content-dataSubSurf {
+    border-right: none;
+    border-bottom: none;
+}
+
+.body-content-dataSubNafp {
+    border-right: none;
+}
+
+.body-content-dataSubUper {
+    border-right: none;
+    border-bottom: none;
+}
+
+.body-content-dataSubSate {
+    border-bottom: none;
+}
+
+.content-dataRi {
+    background-color: white;
+}
+
+.content-dataLe {
+    border-right: none;
+}
+
+.dataListIcon1 {
+    display: inline-block;
+    border-width: 4px;
+    border-style: solid;
+    border-color: white white white #cccccc;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+}
+
+.listWork1 {
+    margin-top: 3px;
+}
+
+.body-content-bottomBk {
+    margin-top: 100px;
+}
+
+.body-content-dataSub {
+    height: auto;
+}
+
+.content-dataRiTo {
+    height: auto;
+}
+
+.commonMore {
+    color: #999;
+    margin-top: 10px;
+}
+
+.commonMore div {
+    color: #999;
+}
+
+.body-content-bottomBk {
+    margin-top: 70px;
+}
+
+.content-dataRiBo {
+    margin-top: -5px;
+}
+
+.important-document-list-div:hover {
+    background-color: #7bbaea;
+}
+
+.important-document-list-div .slide-div {
+    background-color: white;
+}
+
+.body-content-NoticeSubLawQXF {
+    margin-top: 10px;
+}
+
+/*内容区域*/
+
+.ContentTitle p {
+    margin-left: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+.contentCreateOrderLeft ul li {
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-top: 1px solid #dddddd;
+}
+
+.contentCreateOrderLeft li a {
+    display: block;
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+    /*color: black !important;*/
+}
+
+.contentCreateOrderLeft li a:hover, .contentCreateOrderLeft li:focus {
+    color: white;
+    background-color: #47a0e3;
+
+}
+
+.contentCreateOrderRight ul li {
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+
+.contentCreateOrderRight li a {
+    display: block;
+    width: 110px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.contentCreateOrderRight li a:hover, .contentCreateOrderLeft li:focus {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+
+}
+
+.k-picker-wrap .k-icon {
+    margin-top: 8px;
+}
+
+.k-combobox .k-icon, .k-dropdown, .k-selectbox .k-icon {
+    margin-top: 8px;
+}
+
+.contentConditionBoxThree {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.nav12 div.ul div.li {
+    padding: 0px 0px;
+    margin-left: 115px;
+}
+
+body {
+    list-style-type: none !important;
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+td {
+    text-align: center !important;
+
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    line-height: 2.428571 !important;
+}
+
+
+.fontCheckedStyle {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+}
+
+.contentCreateOrderLeftUlLast a {
+    color: #47a0e3 !important;
+}
+
+.contentCreateOrderLeft a {
+    color: black;
+}
+
+/*table.table tr td{
+	border: none;
+}*/
+
+
+.tableFontSize td a {
+    font-size: 16px;
+}
+
+.conditionBrief {
+    width: 1200px;
+    height: 104px;
+    border-bottom: 2px solid #47a0e3;
+}
+
+
+
+.dataDetails p span {
+    color: #666666;
+    font-weight: 100;
+    font-size: 17px;
+}
+
+
+.contentFooter {
+    width: 1200px;
+    height: 145px;
+}
+
+.btnMyData {
+    height: 40px;
+    background-color: #65b5f1;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 200px;
+    border-radius: 3px;
+}
+
+.btnMyData img {
+    vertical-align: middle;
+    margin-top: -2px;
+    /*padding-left: 5px;*/
+}
+
+.btnMyData span {
+    line-height: 40px;
+    margin-left: 7px;
+    color: white;
+    font-size: 16px;
+}
+
+/*table.table{*/
+/*!*width: 996px;*!*/
+/*margin: 0 auto;*/
+/*}*/
+table.table tr {
+
+}
+
+.contentCore {
+    width: 996px;
+    height: 1255px;
+    margin: 0 auto;
+    padding-top: 104px;
+}
+
+.DatePicker {
+    width: 996px;
+    height: 42px;
+    margin-top: -50px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.contentCoreKendo {
+
+}
+
+.cityName {
+    width: 996px;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 50px;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
+.cityNameSelect a {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    width: 60px;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    color: #47a0e3;
+
+}
+
+.cityNameSelect a:hover {
+    background-color: b7dffd;
+    border-radius: 3px;
+    color: #47a0e3;
+}
+
+.cityNameSelectOneList {
+    margin-top: 15px;
+    padding-left: 20px;
+
+}
+
+.cityNameSelectOneList a {
+    margin-left: 34px;
+}
+
+.cityNameSelectTwoList {
+
+    padding-left: 20px;
+}
+
+.cityNameSelectTwoList a {
+    margin-left: 34px;
+}
+
+.cityNameSelectThreeList {
+
+    margin-left: 20px;
+}
+
+.cityNameSelectThreeList a {
+    margin-left: 34px;
+}
+
+.cityNameSelectCheckbox label {
+    float: right;
+    margin-top: 45px;
+    color: #1984fd;
+    font-size: 16px;
+}
+
+.regionSelect {
+    width: 996px;
+    border: 1px solid #DDDDDD;
+    margin-top: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.regionSelectOneList .checkbox {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.regionSelectTwoList .checkbox {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.addSymbol {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #7d7d7d;
+    color: #7d7d7d;
+    text-align: center;
+    line-height: 10px;
+    border-radius: 3px;
+    padding-left: 4px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.addSymbol1 {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #7d7d7d;
+    color: #7d7d7d;
+    text-align: center;
+    line-height: 13px;
+    border-radius: 3px;
+    padding-left: 2px;
+    position: relative;
+    left: 880px;
+    top: -27px;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+.inquireData {
+    width: 996px;
+    height: 42px;
+    margin-top: 45px;
+    border-bottom: 1px solid #dddddd;
+
+}
+
+.inquireDataCheckbox {
+    float: right;
+    color: #1984fd;
+    font-size: 16px;
+    margin-top: -38px !important;
+}
+
+.inquireDataCheckbox label {
+
+}
+
+.inquireDataSelect {
+    width: 996px;
+    height: 295px;
+    border: 1px solid #DDDDDD;
+    margin-top: 80px;
+    border-radius: 3px;
+}
+
+.inquireDataSelectOneList .checkbox {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.inquireDataSelectTwoList .checkbox {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+/*查询数据样式*/
+.allSearchData {
+    margin-left: 50px;
+    border: none;
+}
+
+.allSearchData td {
+    width: 225px;
+
+}
+
+.allSearchData td div {
+    text-align: left;
+}
+
+/*伸缩功能相关*/
+.stretch {
+    display: none;
+}
+
+.showStretch {
+    display: table-row !important;
+}
+
+/********************************************************************************/
+
+/*内容区域*/
+
+.ContentTitle p {
+    margin-left: -30px;
+}
+
+
+
+
+
+
+
+
+
+.contentCreateOrderRight ul li {
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+
+.contentCreateOrderRight li a {
+    display: block;
+    width: 110px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.contentCreateOrderRight li a:hover, .contentCreateOrderLeft li:focus {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+
+}
+
+.k-picker-wrap .k-icon {
+    margin-top: 8px;
+}
+
+.k-combobox .k-icon, .k-dropdown, .k-selectbox .k-icon {
+    margin-top: 8px;
+}
+
+.contentConditionBoxThree {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.nav12 div.ul div.li {
+    padding: 0px 0px;
+    margin-left: 115px;
+}
+
+body {
+    list-style-type: none !important;
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+table {
+    width: 902px;
+    height: 171px;
+    border: 1px solid #dddddd;
+}
+
+td {
+    text-align: center !important;
+
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    line-height: 2.428571 !important;
+}
+
+
+
+
+.fontCheckedStyle {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+}
+
+.contentCreateOrderLeftUlLast a {
+    color: #47a0e3 !important;
+}
+
+.contentCreateOrderLeft a {
+    color: black;
+}
+
+.contentRightFooter {
+    width: 902px;
+    height: 30px;
+
+    margin-top: 20px;
+}
+
+.contentRightFooter button {
+    /*margin-top: -5px;*/
+    height: 30px;
+}
+
+.contentRightFooter span {
+    /*padding-top: 10px !important;*/
+    color: #a7a7a7;
+    line-height: 30px;
+}
+
+.oneTr:hover td {
+    background-color: #cccccc !important;
+}
+
+.contentRightFooter button {
+    line-height: 17px;
+}
+
+/****************************************************************************/
+
+
+.hintBag {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    margin: auto;
+    background-color: red;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    line-height: 30px;
+    border-bottom: 1px solid #dddddd;
+    padding-left: 70px;
+}
+
+.hintBag span {
+    color: #999999;
+    padding-left: 50px;
+}
+
+.important-document-list-divTop div {
+    padding-top: 28px;
+    font: 18px '微软雅黑';
+}
+
+.slide-right-arrowDiv {
+    margin-top: -38;
+}
+
+.boxDivTop-content2 {
+    border-bottom: none;
+}
+
+.dataBkTeB {
+    color: white;
+    font-weight: 100;
+}
+
+.friendList {
+    width: 163px;
+}
+
+.friendList a {
+    color: #737373;
+    font-size: 12px;
+}
+
+.footer-bg14 {
+    background-color: #469fe3;
+    border-top: 1px solid #469fe3;
+    height: 151px;
+}
+
+.footer {
+    background: #1395f8;
+}
+
+.footer-help a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-message p {
+    color: white;
+    font-size: 14px;
+}
+
+.yhzcCeCoIt0 {
+    margin-left: 60px;
+}
+
+.yhzc-boxDivBottom .dataList {
+    margin-left: 36px;
+}
+
+.important-documentDivTitle {
+    background-color: #62b2ef;
+}
+
+.yhzc-boxDivTop {
+    padding-left: 0;
+}
+
+.boxDivTop-content6 {
+    right: 90px;
+}
+
+.boxDivTop-content6 p {
+    font-size: 14px;
+}
+
+.boxDivTop-content2 {
+    right: 88px;
+    top: 60px;
+}
+
+.boxDivTop-content2 p {
+    font-size: 14px;
+}
+
+.region {
+    line-height: 70px;
+    position: absolute;
+    right: 232px;
+    top: 14px;
+}
+
+#provinceName {
+    margin-left: 105px;
+    margin-top: 3px;
+}
+
+.boxDivTop-header2 {
+    margin-left: 172px;
+}
+
+.boxDivTop-header2 {
+    margin-top: -95px;
+}
+
+.yhzc-boxDivTop {
+    background-color: white;
+}
+
+.yhzcCeToIc {
+    background: url(images/contentUser.png) no-repeat;
+}
+
+.boxDivTopTiIcOne {
+    /*background: url(images/contentAir.png) no-repeat;*/
+}
+
+.boxDivTopTiTe {
+    margin-left: 20px;
+}
+
+.yhzcCeCoItTe {
+    width: 60px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.materialContentWidth {
+    width: 270px;
+    margin-left: 20px;
+}
+
+.friendLinkDivWidthBottom {
+    height: 140px;
+}
+
+.commonTitleDiv {
+    width: 270px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.dataListDiv {
+    margin-left: 115px;
+    margin-top: 3px;
+}
+
+.dataImg {
+    margin-top: 71px;
+}
+
+.body-content-data {
+    border: none;
+}
+
+.body-content-dataSubRada {
+    border-right: none;
+}
+
+.body-content-dataSubSurf {
+    border-right: none;
+    border-bottom: none;
+}
+
+.body-content-dataSubNafp {
+    border-right: none;
+}
+
+.body-content-dataSubUper {
+    border-right: none;
+    border-bottom: none;
+}
+
+.body-content-dataSubSate {
+    border-bottom: none;
+}
+
+.content-dataRi {
+    background-color: white;
+}
+
+.content-dataLe {
+    border-right: none;
+}
+
+.dataListIcon1 {
+    display: inline-block;
+    border-width: 4px;
+    border-style: solid;
+    border-color: white white white #cccccc;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+}
+
+.listWork1 {
+    margin-top: 3px;
+}
+
+.body-content-bottomBk {
+    margin-top: 100px;
+}
+
+.body-content-dataSub {
+    height: auto;
+}
+
+.content-dataRiTo {
+    height: auto;
+}
+
+.commonMore {
+    color: #999;
+    margin-top: 10px;
+}
+
+.commonMore div {
+    color: #999;
+}
+
+.body-content-bottomBk {
+    margin-top: 70px;
+}
+
+.content-dataRiBo {
+    margin-top: -5px;
+}
+
+.important-document-list-div:hover {
+    background-color: #7bbaea;
+}
+
+.important-document-list-div .slide-div {
+    background-color: white;
+}
+
+.body-content-NoticeSubLawQXF {
+    margin-top: 10px;
+}
+
+/*内容区域*/
+
+.ContentTitle p {
+    margin-left: -30px;
+}
+
+
+.contentCreateOrderLeft ul li {
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-top: 1px solid #dddddd;
+}
+
+.contentCreateOrderLeft li a {
+    display: block;
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+    /*color: black !important;*/
+}
+
+.contentCreateOrderLeft li a:hover, .contentCreateOrderLeft li:focus {
+    color: white;
+    background-color: #47a0e3;
+
+}
+
+.contentCreateOrderRight ul li {
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+
+.contentCreateOrderRight li a {
+    display: block;
+    width: 110px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.contentCreateOrderRight li a:hover, .contentCreateOrderLeft li:focus {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+
+}
+
+.k-picker-wrap .k-icon {
+    margin-top: 8px;
+}
+
+.k-combobox .k-icon, .k-dropdown, .k-selectbox .k-icon {
+    margin-top: 8px;
+}
+
+/*.contentConditionBox{*/
+/*width: 900px;*/
+/*height: 60px;*/
+/*background-color: #47a0e3;*/
+/*margin-top: 30px;*/
+/*line-height: 60px;*/
+/*color: white;*/
+/*padding-left: 30px;*/
+/*border-radius: 3px;*/
+/*font-size: 18px;*/
+
+/*}*/
+
+.contentConditionBoxThree {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.nav12 div.ul div.li {
+    padding: 0px 0px;
+    margin-left: 115px;
+}
+
+body {
+    list-style-type: none !important;
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+td {
+    text-align: center !important;
+
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    line-height: 2.428571 !important;
+}
+
+
+
+
+.fontCheckedStyle {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+}
+
+.contentCreateOrderLeftUlLast a {
+    color: #47a0e3 !important;
+}
+
+.contentCreateOrderLeft a {
+    color: black;
+}
+
+/*table.table tr td{
+	border: none;
+}*/
+
+
+.tableFontSize td a {
+    font-size: 16px;
+}
+
+.conditionBrief {
+    width: 1200px;
+    height: 104px;
+    border-bottom: 2px solid #47a0e3;
+}
+
+.conditionBrief span {
+    font-size: 30px;
+    padding-top: 50px;
+    line-height: 114px;
+    color: #47a0e3;
+}
+
+.dataDetails p {
+    font-size: 14px;
+    font-weight: 200;
+    color: #595a5b;
+    padding-left: 65px;
+}
+
+.dataDetails p span {
+    color: #666666;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+table.table {
+    font-size: 13px !important;
+}
+
+.contentFooter {
+    width: 1200px;
+    height: 145px;
+    margin-top: 120px;
+}
+
+
+
+.btnMyData img {
+    vertical-align: middle;
+    margin-top: -5px;
+    padding-left: 10px;
+}
+
+.btnMyData span {
+    line-height: 40px;
+    margin-left: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.dataInquire {
+    width: 1200px;
+    margin-top: 31px;
+    overflow: hidden!important;
+}
+
+.dataInquireTitle {
+    width: 1200px;
+    height: 22px;
+}
+
+.dataInquireTitleNu {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    color: white;
+    background-color: #469fe3;
+    text-align: center;
+    line-height: 22px;
+
+}
+
+.dataInquireTitle h4 {
+    display: inline-block;
+    height: 22px;
+    margin-top: 0;
+    color: #469fe3;
+    margin-left: 15px;
+}
+
+.dataInquireTitle p {
+    font-size: 14px;
+}
+
+.rankContent {
+    color: #c5c5c5;
+}
+
+.cityNameSelect {
+    width: 996px;
+    /* height: 100px; */
+    border: 1px solid #DDDDDD;
+    margin-top: 105px;
+    border-radius: 3px;
+     margin-left: 43px;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.cityNameSelect a {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    /*width: 60px;*/
+    width: 70px;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    color: #47a0e3;
+
+}
+
+.cityNameSelect a:hover {
+    background-color: b7dffd;
+    border-radius: 3px;
+    color: #47a0e3;
+}
+
+.cityNameSelectOneList {
+    margin-top: 5px;
+    padding-left: 7px;
+
+}
+
+.cityNameSelectOneList a {
+    margin-left:: 14px;
+}
+
+.cityNameSelectTwoList {
+
+    /*padding-left: 22px;*/
+    margin-left: 7px;
+}
+
+.cityNameSelectTwoList a {
+    margin-left: 0px;
+}
+
+.dataInquire ul {
+    margin-left: 12px;
+    margin-top: 75px;
+}
+
+.dataInquire ul li {
+    float: left;
+    margin-left: 30px;
+}
+
+.dataInquire ul li a {
+    color: #337ab7 !important;
+}
+
+.dataProduct {
+    border-top: 1px solid white;
+}
+
+.dataProduct h2, .dataProduct h4 {
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.dataProduct h2 {
+    margin-top: 80px;
+}
+
+/*内容区域*/
+
+.coreContent {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.ContentTitle {
+    font-size: 16px;
+}
+
+.ContentTitle p {
+    margin-left: -30px;
+}
+
+
+
+.contentCreateOrderLeft {
+    width: 160px;
+    height: 408px;
+    background: #f0f0f0;
+    float: left;
+    font-size: 18px;
+    color: #666666;
+}
+
+.contentCreateOrderLeft span {
+    display: block;
+    width: 160px;
+    height: 50px;
+    background-color: rgb(33, 150, 238);
+    text-align: center;
+    color: #FFF;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+
+
+
+.contentCreateOrderLeft ul li {
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-top: 1px solid #dddddd;
+}
+
+.contentCreateOrderLeft li a {
+    display: block;
+    width: 160px;
+    height: 50px;
+    font-size: 15px;
+    /*color: black !important;*/
+}
+
+.contentCreateOrderLeft li a:hover, .contentCreateOrderLeft li:focus {
+    color: white;
+    background-color: #47a0e3;
+
+}
+
+.contentCreateOrderRight {
+    width: 85%;
+    float: left;
+    margin-left: 20px;
+}
+
+.contentCreateOrderRight ul li {
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+
+.contentCreateOrderRight li a {
+    display: block;
+    width: 110px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.contentCreateOrderRight li a:hover, .contentCreateOrderLeft li:focus {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+
+}
+
+.k-picker-wrap .k-icon {
+    margin-top: 8px;
+}
+
+.k-combobox .k-icon, .k-dropdown, .k-selectbox .k-icon {
+    margin-top: 8px;
+}
+
+.contentConditionBox {
+    width: 100%;
+    height: 60px;
+    background-color: #f0f0f0;
+    line-height: 60px;
+}
+
+.contentConditionBoxOne {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.contentConditionBoxTwo {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.contentConditionBoxThree {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.nav12 div.ul div.li {
+    padding: 0px 0px;
+    margin-left: 115px;
+}
+
+body {
+    list-style-type: none !important;
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+td {
+    text-align: center !important;
+
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    line-height: 2.428571 !important;
+}
+
+
+
+.fontCheckedStyle {
+    color: #47a0e3;
+    border-bottom: 2px solid #47a0e3;
+}
+
+.contentCreateOrderLeftUlLast a {
+    color: #47a0e3 !important;
+}
+
+.contentCreateOrderLeft a {
+    color: black;
+}
+
+table.table tr td {
+    border: none;
+}
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+
+
+
