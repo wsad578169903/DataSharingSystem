@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="test.do">跳转到登录页面</a>
+<a href="dataupload2.do">跳转到登录页面</a>
 
 
 

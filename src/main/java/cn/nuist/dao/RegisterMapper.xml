@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.nuist.dao.RegisterMapper">
+
+	<insert id="addAdmin" parameterType="cn.nuist.pojo.user.Admin">
+		insert into admin(username,pwd,xm) values(#{username},#{pwd},#{xm})
+	</insert>
+	
+	 <select id="checkRegister" parameterType="String" resultType="String">
+		select username from admin where username = #{username}
+	</select>
+</mapper>  

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cn.nuist.dao.AdminMapper;
+import cn.nuist.dao.RegisterMapper;
 import cn.nuist.pojo.user.Admin;
 
 /**
@@ -16,6 +17,8 @@ public class AdminServiceImpl implements AdminService {
 	
 	@Autowired
 	private AdminMapper adminMapper;
+	@Autowired
+	private RegisterMapper rm;
 	
 	@Override
 	public Admin checkLogin(String username, String password) {
@@ -26,6 +29,18 @@ public class AdminServiceImpl implements AdminService {
 		
 		return null;
 	}
+	
+	@Override
+	public void addAdmin(Admin admin) {
+		rm.addAdmin(admin);
+		
+	}
 
+
+	@Override
+	public String checkRegister(String username) {
+		
+		return rm.checkRegister(username);
+	}
 
 }

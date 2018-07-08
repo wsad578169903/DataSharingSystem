@@ -12,222 +12,498 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-			<meta name="author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-				<title>数据下载</title> <!-- Bootstrap Core CSS -->
-				<link href="/res/css/bootstrap.min.css" rel="stylesheet">
-
-					<!-- MetisMenu CSS -->
-					<link href="/res/css/metisMenu.min.css" rel="stylesheet">
-
-						<!-- DataTables CSS -->
-						<link href="/res/css/dataTables.bootstrap.css" rel="stylesheet">
-
-							<!-- Custom CSS -->
-							<link href="/res/css/sb-admin-2.css" rel="stylesheet">
-
-								<!-- Custom Fonts -->
-								<link href="/res/css/font-awesome.min.css" rel="stylesheet"
-									type="text/css">
-									<link href="/res/css/boot-crm.css" rel="stylesheet"
-										type="text/css">
-
-										<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-										<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-										<!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<title>数据下载</title>
+<link rel="stylesheet" type="text/css"
+	href="/res/dataDownload/css/style.css" />
+<link rel="stylesheet" href="/res/dataDownload/css/stylechange1.css">
+<link rel="stylesheet" type="text/css"
+	href="/res/dataDownload/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/res/dataDownload/css/hu_style.css">
+<!--iconfont图标文件-->
+<link rel="stylesheet"
+	href="http://at.alicdn.com/t/font_437888_b8af6fhfkexko6r.css">
+<!--Kendoui-->
+<link href="/res/dataDownload/kendoui/kendo.common.min.css"
+	rel="stylesheet">
+<link href="/res/dataDownload/kendoui/kendo.rtl.min.css"
+	rel="stylesheet">
+<link href="/res/dataDownload/kendoui/kendo.bootstrap.min.css"
+	rel="stylesheet">
+<!--End Kendoui-->
+<link rel="stylesheet" type="text/css"
+	href="/res/dataDownload/css/common.css" />
+<script src="/res/dataDownload/js/jquery-2.1.1.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<script src="/res/dataDownload/js/bootstrap.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<script src="/res/dataDownload/js/kendo.all.min.js"></script>
 </head>
 
 <body>
-
-	<!-- /.row -->
-	<div class="panel panel-default">
-		<div class="panel-body">
+	<!-- 按站点下载开始 -->
+	<div class="juzhong">
+		<div id="listA" class="regionSelect1">
 			<form class="form-inline"
-				action="${pageContext.request.contextPath }/download.do"
-				method="get">
-				<div class="form-group">
-					<label for="dataStation">数据站点</label> <input type="text"
-						class="form-control" id="dataStation" value="${dataStation}"
-						name="dataStation">
-				</div>
-				<div class="form-group">
-					<label for="dataCity">数据城市</label> <select class="form-control"
-						id="dataCity" name="dataCity">
-						<option value="">--请选择--</option>
-						<c:forEach items="${cityType}" var="item">
-							<option value="${item.dict_id}"
-								<c:if test="${item.dict_id == dataCity}"> selected</c:if>>${item.dict_item_name }</option>
-						</c:forEach>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="dataElement">数据要素</label> <select class="form-control"
-						id="dataElement" name="dataElement">
-						<option value="">--请选择--</option>
-						<c:forEach items="${elementType}" var="item">
-							<option value="${item.dict_id}"
-								<c:if test="${item.dict_id == dataElement}"> selected</c:if>>${item.dict_item_name }</option>
-						</c:forEach>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="dataYear">数据年份</label> <select class="form-control"
-						id="dataYear" name="dataYear">
-						<option value="">--请选择--</option>
-						<c:forEach items="${yearType}" var="item">
-							<option value="${item.dict_id}"
-								<c:if test="${item.dict_id == dataYear}"> selected</c:if>>${item.dict_item_name }</option>
-						</c:forEach>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="dataMonth">数据月份</label> <select class="form-control"
-						id="dataMonth" name="dataMonth">
-						<option value="">--请选择--</option>
-						<c:forEach items="${monthType}" var="item">
-							<option value="${item.dict_id}"
-								<c:if test="${item.dict_id == dataMonth}"> selected</c:if>>${item.dict_item_name }</option>
-						</c:forEach>
-					</select>
-				</div>
-
+				action="${pageContext.request.contextPath }/downloadByDataStation.do"
+				method="get" onsubmit="return sumbit_form()">
+				<label for="dataStation">输入数据站点名称下载</label> <input type="text"
+					id="dataStation" value="${dataStation}" name="dataStation">
 				<button type="submit" class="btn btn-primary")">下载</button>
-
-				</script>
 			</form>
-
 		</div>
+		<!-- 按站点下载结束 -->
+
+
+
+		<form class="form-inline"
+			action="${pageContext.request.contextPath }/downloadBySelect.do"
+			method="get" onsubmit="return sumbit_form()">
+			<!--年份选择-->
+			<div class="contentCreateOrder">
+				<h4 class="cityName" align="center">选择年份</h4>
+
+				<!-- 
+				全选
+				<div class=" cityNameSelectCheckbox">
+					<label> <input id="reverseA" type="checkbox"> 全选
+					</label>
+				</div> -->
+				<div id="listA" class="regionSelect1">
+					<table class="allSearchData" border="0" cellspacing=""
+						cellpadding="" align="center">
+						<tr>
+							<td>
+								<div class="checkbox">
+									<input type="radio" name="dataYear" id="dataYear" value="2012">
+									2012
+								</div>
+							</td>
+							<td>
+								<div class="checkbox">
+									<label> <input type="radio" name="dataYear"
+										id="dataYear" value="2013"> 2013
+									</label>
+								</div>
+							</td>
+							<td>
+								<div class="checkbox">
+									<label> <input type="radio" name="dataYear"
+										id="dataYear" value="2014"> 2014
+									</label>
+								</div>
+							</td>
+							<td>
+								<div class="checkbox">
+									<label> <input type="radio" name="dataYear"
+										id="dataYear" value="2015"> 2015
+									</label>
+								</div>
+							</td>
+
+							<td>
+								<div class="checkbox">
+									<label> <input type="radio" name="dataYear"
+										id="dataYear" value="2016"> 2016
+									</label>
+								</div>
+							</td>
+							<td>
+								<div class="checkbox">
+									<label> <input type="radio" name="dataYear"
+										id="dataYear" value="2017"> 2017
+									</label>
+								</div>
+							</td>
+							<td>
+								<div class="checkbox">
+									<label> <input type="radio" name="dataYear"
+										id="dataYear" value="2018"> 2018
+									</label>
+								</div>
+							</td>
+							<td>
+								<div class="checkbox">
+									<label> <input type="radio" name="dataYear"
+										id="dataYear" value="2019"> 2019
+									</label>
+								</div>
+							</td>
+
+						</tr>
+					</table>
+				</div>
+				<!--月份选择-->
+				<div class="contentCreateOrder">
+					<h4 class="cityName" align="center">选择月份</h4>
+					<div id="listA" class="regionSelect1">
+						<table class="allSearchData" border="0" cellspacing=""
+							cellpadding="" align="center">
+							<tr>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="1">
+										1
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label> <input type="radio" name="dataMonth"
+											id="dataMonth" value="2"> 2
+										</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="3">
+										3
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="4">
+										4
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="5">
+										5
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="6">
+										6
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="7">
+										7
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label> <input type="radio" name="dataMonth"
+											id="dataMonth" value="8"> 8
+										</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="9">
+										9
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="10">
+										10
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="11">
+										11
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<input type="radio" name="dataMonth" id="dataMonth" value="12">
+										12
+									</div>
+								</td>
+							</tr>
+
+
+
+
+						</table>
+					</div>
+
+
+					<h4 class=" cityName">选择省份</h4>
+					<div class="cityNameSelect">
+						<div class="cityNameSelectOneList">
+							<a href="javascript:void(0)">北京</a> <a href="javascript:void(0)">天津</a>
+							<a href="javascript:void(0)">河北</a> <a href="javascript:void(0)">山西</a>
+							<a href="javascript:void(0)">内蒙古</a> <a href="javascript:void(0)">辽宁</a>
+							<a href="javascript:void(0)">吉林</a> <a href="javascript:void(0)">黑龙江</a>
+							<a href="javascript:void(0)">上海</a> <a href="javascript:void(0)">江苏</a>
+							<a href="javascript:void(0)">浙江</a> <a href="javascript:void(0)">安徽</a>
+							<a href="javascript:void(0)">福建</a>
+						</div>
+						<div class="cityNameSelectTwoList">
+							<a href="javascript:void(0)">江西</a> <a href="javascript:void(0)">山东</a>
+							<a href="javascript:void(0)">河南</a> <a href="javascript:void(0)">湖北</a>
+							<a href="javascript:void(0)">湖南</a> <a href="javascript:void(0)">广东</a>
+							<a href="javascript:void(0)">广西</a> <a href="javascript:void(0)">海南</a>
+							<a href="javascript:void(0)">重庆</a> <a href="javascript:void(0)">四川</a>
+							<a href="javascript:void(0)">贵州</a> <a href="javascript:void(0)">云南</a>
+							<a href="javascript:void(0)">西藏</a>
+
+						</div>
+						<div class="cityNameSelectThreeList">
+							<a href="javascript:void(0)">陕西</a> <a href="javascript:void(0)">甘肃</a>
+							<a href="javascript:void(0)">青海</a> <a href="javascript:void(0)">宁夏</a>
+							<a href="javascript:void(0)">新疆</a> <a href="javascript:void(0)">台湾</a>
+							<a href="javascript:void(0)">香港</a> <a href="javascript:void(0)">澳门</a>
+							<a href="javascript:void(0)">极地</a>
+						</div>
+					</div>
+					<div class=" cityNameSelectCheckbox">
+						<h4 class=" cityName">选择城市</h4>
+					</div>
+
+					<div id="listA" class="regionSelect1">
+
+						<table class="allSearchData" border="0" cellspacing=""
+							cellpadding="">
+							<tr>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="2">北京 </label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="3">上海 </label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="7">广东</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="6">深圳</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="5">张家口</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="1">佛山</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="8">南京</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="9">杭州</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="4">承德</label>
+									</div>
+								</td>
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="10">成都</label>
+									</div>
+								</td>
+							</tr>
+							<tr class="stretch">
+								<td>
+									<div class="checkbox">
+										<label><input type="radio" name="dataCity"
+											id="dataCity" value="11">成都 </label>
+									</div>
+								</td>
+
+
+								<td>
+									<div class="addSymbol">-</div>
+								</td>
+							</tr>
+						</table>
+						<div class="addSymbol1">+</div>
+
+
+					</div>
+					<!--要素选择-->
+					<div class="contentCreateOrder">
+						<h4 class="cityName" align="center">选择要素</h4>
+
+						<div id="listA" class="regionSelect1">
+							<table class="allSearchData" border="0" cellspacing=""
+								cellpadding="" align="center">
+								<tr>
+									<td>
+										<div class="checkbox">
+											<input type="radio" name="dataElement" id="dataElement"
+												value="8"> 温度
+										</div>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value="">湿度
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value="10"> 风速
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value=""> 气压
+											</label>
+										</div>
+									</td>
+
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value=""> 降水
+											</label>
+										</div>
+									</td>
+
+								</tr>
+								<tr>
+									<td>
+										<div class="checkbox">
+											<input type="radio" name="dataElement" id="dataElement"
+												value=""> 云量
+										</div>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value="">水汽压
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value=""> 水平能见度
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value=""> 体感温度
+											</label>
+										</div>
+									</td>
+
+									<td>
+										<div class="checkbox">
+											<label> <input type="radio" name="dataElement"
+												id="dataElement" value=""> 风力
+											</label>
+										</div>
+									</td>
+
+								</tr>
+							</table>
+						</div>
+
+						<div class="buttonjuzhong">
+							<button type="submit" class="btnMyData" align="center"
+								style="cursor: pointer">
+								<img src="/res/dataDownload/images/contentSearch.png" /><span>数据下载</span>
+							</button>
+
+						</div>
+
+						
+		</form>
 	</div>
-	
-	
-	<!-- /#page-wrapper -->
 
-	</div>
-	<!-- 数据编辑对话框 -->
-	<div class="modal fade" id="dataEditDialog" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">修改数据信息</h4>
-				</div>
-				<div class="modal-body">
-					<form class="form-horizontal" id="edit_data_form">
-						<input type="hidden" id="edit_t_id" name="cust_id" />
-						<div class="form-group">
-							<label for="edit_stationId" class="col-sm-2 control-label">数据站点</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="edit_stationId"
-									placeholder="数据站点" name=" t_id ">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="edit_dataCity"
-								style="float: left; padding: 7px 15px 0 27px;">数据城市</label>
-							<div class="col-sm-10">
-								<select class="form-control" id="edit_dataCity"
-									placeholder="数据城市" name="data_city">
-									<option value="">--请选择--</option>
-									<c:forEach items="${cityType}" var="item">
-										<option value="${item.dict_id}"
-											<c:if test="${item.dict_id == dataCity}"> selected</c:if>>${item.dict_item_name }</option>
-									</c:forEach>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="edit_dataElement"
-								style="float: left; padding: 7px 15px 0 27px;">数据要素</label>
-							<div class="col-sm-10">
-								<select class="form-control" id="edit_dataElement"
-									name="data_element">
-									<option value="">--请选择--</option>
-									<c:forEach items="${elementType}" var="item">
-										<option value="${item.dict_id}"
-											<c:if test="${item.dict_id == dataElement}"> selected</c:if>>${item.dict_item_name }</option>
-									</c:forEach>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="edit_dataYear"
-								style="float: left; padding: 7px 15px 0 27px;">数据年份</label>
-							<div class="col-sm-10">
-								<select class="form-control" id="edit_dataYear" name="data_year">
-									<option value="">--请选择--</option>
-									<c:forEach items="${yearType}" var="item">
-										<option value="${item.dict_id}"
-											<c:if test="${item.dict_id == dataYear}"> selected</c:if>>${item.dict_item_name }</option>
-									</c:forEach>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="edit_dataMon"
-								style="float: left; padding: 7px 15px 0 27px;">数据月份</label>
-							<div class="col-sm-10">
-								<select class="form-control" id="edit_dataMon" name="data_mon">
-									<option value="">--请选择--</option>
-									<c:forEach items="${monthType}" var="item">
-										<option value="${item.dict_id}"
-											<c:if test="${item.dict_id == dataMonth}"> selected</c:if>>${item.dict_item_name }</option>
-									</c:forEach>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="edit_dataElement" class="col-sm-2 control-label">数据要素</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="edit_dataElement"
-									placeholder="数据要素类型" name="data_element">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="edit_dataSource" class="col-sm-2 control-label">数据来源</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="edit_dataSource"
-									placeholder="数据来源" name="data_source">
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-					<button type="button" class="btn btn-primary"
-						onclick="updateData()">保存修改</button>
+	<script type="text/javascript">
+		$("#reverseA").click(function() {
+			if (this.checked) {
+				$("#listA :checkbox").prop("checked", true);
+			} else {
+				$("#listA :checkbox").prop("checked", false);
+			}
+		});
+		$("#reverseB").click(function() {
+			if (this.checked) {
+				$("#listB :checkbox").prop("checked", true);
+			} else {
+				$("#listB :checkbox").prop("checked", false);
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		$(".addSymbol1").click(function() {
+			$(".regionSelect").css("height", "168px");
+			$(".stretch").addClass("showStretch");
+			$(".addSymbol1").css("display", "none");
+		})
+		$(".addSymbol").click(function() {
+			$(".regionSelect").css("height", "95px");
+			$(".stretch").removeClass("showStretch");
+			$(".addSymbol1").css("display", "block");
+		})
+	</script>
 
-				</div>
-			</div>
-		</div>
-		<!-- /#wrapper -->
 
-		<!-- jQuery -->
-		<script src="<%=basePath%>js/jquery.min.js"></script>
+	<script language="javascript">
+		function sumbit_form() {
+			var gnl = confirm("是否下载此数据?");
+			if (gnl == true) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	</script>
 
-		<!-- Bootstrap Core JavaScript -->
-		<script src="<%=basePath%>js/bootstrap.min.js"></script>
 
-		<!-- Metis Menu Plugin JavaScript -->
-		<script src="<%=basePath%>js/metisMenu.min.js"></script>
 
-		<!-- DataTables JavaScript -->
-		<script src="<%=basePath%>js/jquery.dataTables.min.js"></script>
-		<script src="<%=basePath%>js/dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function checkForm() {
+			var flag = true;
+			var message = form1.message.value;
+			if (message != 'null') {
+				alert(message);
+				flag = false;
+			}
+			return flag;
+		}
+	</script>
 
-		<!-- Custom Theme JavaScript -->
-		<script src="<%=basePath%>js/sb-admin-2.js"></script>
 
-		
+
+
 </body>
-
 </html>

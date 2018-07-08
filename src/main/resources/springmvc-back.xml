@@ -45,7 +45,7 @@
 	<!-- 拦截器 -->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/**" />
+			<mvc:mapping path="/index.*"  />
 			<bean class="cn.nuist.common.web.LoginInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>

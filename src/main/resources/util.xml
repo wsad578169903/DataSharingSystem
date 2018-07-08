@@ -15,4 +15,5 @@
 	<!-- Md5加密 -->
 	<bean id="md5Pwd" class="cn.nuist.common.encode.Md5PwdImpl"/>
 	
+	
 </beans>

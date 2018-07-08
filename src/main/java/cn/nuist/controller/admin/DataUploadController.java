@@ -1,9 +1,19 @@
 package cn.nuist.controller.admin;
 
+import java.io.InputStream;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import cn.nuist.service.DataService;
 
 /**
  * @author libo
@@ -12,12 +22,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class DataUploadController {
-	// 数据上传
-	@RequestMapping(value ="/data/dataUpload.do")
-	public String dataDownload() {
-		return "data/dataUpload";
+	@Autowired
+	private DataService dataService;
+	@RequestMapping(value = "/upload.do")
+	public String impotr(HttpServletRequest request, Model model) throws Exception {
+		// 获取上传的文件
+		MultipartHttpServletRequest multipart = (MultipartHttpServletRequest) request;
+		MultipartFile file = multipart.getFile("filename");
+		InputStream in = file.getInputStream();
+		// 数据导入
+		dataService.importTemperatureData(in, file);
+		in.close();
+		return "dataUploadSuccess";
 	}
 
-	
-	
 }

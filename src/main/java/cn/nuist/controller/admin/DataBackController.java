@@ -46,7 +46,11 @@ public class DataBackController {
 		return "register";
 	}
 
-
+	/* 跳转注册成功页面 */
+	@RequestMapping("/success")
+	public String success() {
+		return "success";
+	}
 
 	/* 跳转数据下载页面 */
 	@RequestMapping(value = "/data/dataDownload.do")
@@ -54,15 +58,29 @@ public class DataBackController {
 		return "data/dataDownload";
 	}
 
+	/* 跳转数据上传页面 */
+	@RequestMapping(value = "/data/dataUpload.do")
+	public String dataUpload() {
+		return "data/dataUpload";
+	}
+
 	/* 跳转数据查询页面 */
 	@RequestMapping(value = "/data/dataQuery.do")
 	public String dataQuery() {
 		return "data/dataQuery";
 	}
+
 	/* 测试页面跳转到login页面 */
 	@RequestMapping(value = "/test.do")
 	public String test() {
 		return "login";
 	}
-	
+
+	/* 测试页面跳转到测试下载页面 */
+	@RequestMapping(value = "/dataupload2.do")
+	public String dataupload() {
+		return "test/dataUpload2";
+	}
+
+
 }

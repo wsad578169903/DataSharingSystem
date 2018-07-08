@@ -488,7 +488,7 @@ td{
     background-color: #65b5f1;
     border-radius: 3px;
     margin:0 auto;
-    margin-top: 70px;
+    margin-top: 32px;
 }
 .btnMyData img{
     vertical-align: middle;
@@ -524,10 +524,10 @@ table.table tr{
 
 }
 .cityName{
-    width: 996px;
-    height: 42px;
-    margin-top: 50px;
-    border-bottom: 1px solid #dddddd;
+    width: 73px;
+    height: 23px;
+    margin-top: 28px;
+    border-bottom: 0px solid #dddddd;
 }
 
 .cityNameSelect{
@@ -577,20 +577,27 @@ table.table tr{
     margin-left: 34px;
 }
 .cityNameSelectCheckbox label{
-    float: right;
+    
     margin-top: 45px;
     color: #1984fd;
     font-size: 16px;
 }
-.regionSelect{
+.regionSelect1{
     width: 996px;
-    height: 95px;
+    height: 46px;
     /*height: 168px;*/
     border: 1px solid #DDDDDD;
-    margin-top: 80px;
-    border-radius: 3px;
+    margin-top: 6px;
+    border-radius: 16px;
 }
-
+.regionSelect{
+    width: 996px;
+    height: 46px;
+    /*height: 168px;*/
+    border: 1px solid #DDDDDD;
+    margin-top: 6px;
+    border-radius: 16px;
+}
 .regionSelectOneList .checkbox{
     display: inline-block;
     margin-left: 80px;
@@ -621,8 +628,8 @@ table.table tr{
     border-radius: 3px;
     padding-left: 2px;
     position: relative;
-    left: 880px;
-    top: -27px;
+    left: 965px;
+    top: -18px;
     z-index: 10;
     cursor:pointer;
 
@@ -685,3 +692,12 @@ table.table tr{
     display:table-row !important;
 }
 
+.juzhong{
+    width:1007px;
+    height:150px;
+    margin:0 auto;
+}
+.buttonjuzhong
+{
+ text-align:center;
+}

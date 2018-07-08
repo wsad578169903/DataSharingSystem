@@ -207,7 +207,7 @@ li.twt {
     transition: .5s all;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"],input[type="xingming"] {
     width: 93.4%;
     margin-bottom: 20px;
     padding: 10px;
@@ -347,7 +347,7 @@ input[type="yzm"]{
 
 @media screen and (max-width: 1440px) {
     .container {
-        width: 53%;
+        width: 35%;
     }
 }
 
@@ -558,12 +558,6 @@ input[type="yzm"]{
     }
 }
 
-/*--- 错误提示文字样式设置 ---*/
-.sss li {
-line-height:30px; /*li的行高，可以控制li的间距*/
-font-size:15px;  /*li内文字的大小*/
-padding-left:20px;  /*li内文字距离左边的距离*/
-color:red;list-style: none; /*去调li的点 ,一般不用li自带的点*/
-}
+
 
 /*--- Responsive Code ---*/
