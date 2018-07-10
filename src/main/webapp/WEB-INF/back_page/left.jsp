@@ -14,7 +14,8 @@
       	<li><a href="right.jsp" target="rightFrame">会员注册统计</a></li>
      	<li><a href="frame/product_main.do" target="mainFrame">数据管理</a></li>
      	<li><a href="right.jsp" target="rightFrame">订单统计</a></li>
-     	<li><a href="right.jsp" target="rightFrame">留言统计</a></li>
+     	<!-- <li><a href="message/message_manage.do" target="rightFrame">留言管理</a></li> -->
+     	<li><a href="listMessage.do" target="rightFrame">留言管理</a></li>
      	<li><a href="right.jsp" target="rightFrame">PV统计</a></li>
      	<li><a href="right.jsp" target="rightFrame">独立IP统计</a></li>
      	<li><a href="right.jsp" target="rightFrame">独立访客统计</a></li>

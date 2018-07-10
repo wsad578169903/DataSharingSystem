@@ -16,10 +16,13 @@ import cn.nuist.dao.TemperatureMapper;
 import cn.nuist.pojo.BaseDict;
 import cn.nuist.pojo.DownloadVo;
 import cn.nuist.pojo.ExcelBean;
+import cn.nuist.pojo.Message;
+import cn.nuist.pojo.MessageVo;
 import cn.nuist.pojo.QueryVo;
 import cn.nuist.pojo.Temperature;
 import cn.nuist.common.utils.ExcelUtil;
 import cn.nuist.dao.DictMapper;
+import cn.nuist.dao.MessageMapper;
 
 @Service
 public class DataServiceImpl implements DataService {
@@ -30,6 +33,8 @@ public class DataServiceImpl implements DataService {
 	@Autowired
 	private DictMapper dictMapper;
 	
+	@Autowired
+	private MessageMapper messageMapper;
 	@Override
 	public List<BaseDict> findDictByCode(String code) {
 		List<BaseDict> list = dictMapper.findDictByCode(code);
@@ -298,6 +303,38 @@ public class DataServiceImpl implements DataService {
 	public List<Temperature> checkDataElement(String dataElement) {
 		
 		return temperatureMapper.checkDataElement(dataElement);
+	}
+
+	//插入留言
+	@Override
+	public void insertMessage(Message msg) {
+		messageMapper.insertMessage(msg);
+	}
+
+	//查询所有留言
+	@Override
+	public List<Message> findMessageAll(MessageVo vo) {
+		List<Message> list = messageMapper.findMessageAll(vo);
+		return list;
+	}
+
+	//留言查询分页用
+	@Override
+	public Integer findMessageCount() {
+		Integer count = messageMapper.findMessageCount();
+		return count;
+	}
+
+	//删除留言
+	@Override
+	public void deleteMessageById(BigInteger id) {
+		messageMapper.deleteMessageById(id);
+	}
+
+	//批量删除留言
+	@Override
+	public void deleteMessageByIds(BigInteger[] ids) {
+		messageMapper.deleteMessageByIds(ids);
 	}
 
 

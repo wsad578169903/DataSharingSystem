@@ -81,6 +81,10 @@ public class DataBackController {
 	public String dataupload() {
 		return "test/dataUpload2";
 	}
-
-
+	
+	/* 跳转留言板页面 */
+	@RequestMapping(value = "message/message_manage.do")
+	public String message_manage() {
+		return "message/message_manage";
+	}
 }

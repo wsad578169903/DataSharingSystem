@@ -10,6 +10,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import cn.nuist.pojo.BaseDict;
 import cn.nuist.pojo.DownloadVo;
+import cn.nuist.pojo.Message;
+import cn.nuist.pojo.MessageVo;
 import cn.nuist.pojo.QueryVo;
 import cn.nuist.pojo.Temperature;
 
@@ -48,6 +50,16 @@ public interface DataService {
 	public List<Temperature> checkDataCity(String dataCity);
 	//检查要素是否有数据
 	public List<Temperature> checkDataElement(String dataElement);
+	//插入留言
+	public void insertMessage(Message msg);
+	//查询所有留言
+	public List<Message> findMessageAll(MessageVo vo);
+	//查询留言分页用
+	public Integer findMessageCount();
+	//删除留言
+	public void deleteMessageById(BigInteger id);
+	//批量删除留言
+	public void deleteMessageByIds(BigInteger[] ids);
 	
 	
 	

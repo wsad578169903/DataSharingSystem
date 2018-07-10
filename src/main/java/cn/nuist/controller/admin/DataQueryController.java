@@ -44,7 +44,7 @@ public class DataQueryController {
 		List<BaseDict> elementList = dataService.findDictByCode(element);
 		// 数据来源
 		List<BaseDict> yearList = dataService.findDictByCode(year);
-		// 数据级别
+		// 数据月份
 		List<BaseDict> monthList = dataService.findDictByCode(month);
 
 		if (vo.getDataStation() != null) {
@@ -57,7 +57,6 @@ public class DataQueryController {
 
 		// 设置查询的起始记录条数
 		vo.setStart((vo.getPage() - 1) * vo.getSize());
-
 		// 查询数据列表和数据总数
 		List<Temperature> resultList = dataService.findTemperatureByVo(vo);
 		Integer count = dataService.findTemperatureByVoCount(vo);
@@ -69,7 +68,7 @@ public class DataQueryController {
 		page.setRows(resultList);// 数据列表
 
 		model.addAttribute("page", page);
-
+		//System.out.println(vo.getStart());
 		// 查询下拉列表数据
 		model.addAttribute("cityType", cityList);
 		model.addAttribute("elementType", elementList);
